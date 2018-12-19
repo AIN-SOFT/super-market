@@ -1,0 +1,6 @@
+.login-btn{
+    -fx-background-color:#1E90FF;
+    -fx-text-fill: white ;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
