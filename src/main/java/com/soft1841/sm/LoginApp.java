@@ -11,7 +11,7 @@ public class LoginApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("超市收银系统");
+        primaryStage.setTitle("超市收银");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         primaryStage.getIcons().add(new Image("/img/001.jpg"));
         Scene scene = new Scene(root, 790, 520);
