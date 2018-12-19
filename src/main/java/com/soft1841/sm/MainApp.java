@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("超市收银系统");
+        primaryStage.setTitle("超市收银界面");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
