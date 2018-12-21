@@ -20,10 +20,11 @@
             <Font size="19.0" />
          </font></Label>
       <PasswordField layoutX="334.0" layoutY="242.0" fx:id="passwordField"/>
-      <Button onAction="#login" layoutX="304.0" layoutY="315.0" mnemonicParsing="false" styleClass="login-btn" text="登密陆"/>
+      <Button onAction="#login" layoutX="304.0" layoutY="315.0" mnemonicParsing="false"
+              styleClass="login-btn" text="登陆"/>
       <HBox prefHeight="82.0" prefWidth="790.0" style="-fx-background-color: #00bfff;">
          <children>
-            <Label text="       超市收银管理系统登陆" textFill="#357e8a">
+            <Label text="       超市收银管理系统后台" textFill="#357e8a">
                <font>
                   <Font size="58.0" />
                </font>
