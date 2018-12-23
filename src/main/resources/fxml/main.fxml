@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
+
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.MainController">
-<Button text="skjflksj"/>
-</AnchorPane>
+
+    <top>
+        <AnchorPane prefHeight="80.0" >
+            <ImageView fitHeight="110">
+                <Image url="/img/topbj.jpg"/>
+            </ImageView>
+            <!--点击这个文字显示默认主页数据-->
+            <Label text="五行java收银系统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+                <!--字体特效-->
+                <effect>
+                    <Reflection bottomOpacity="0.3" fraction="0.8" topOffset="-2.0"/>
+                </effect>
+                <font>
+                    <Font name="System Bold" size="20"/>
+                </font>
+            </Label>
+            <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"/>
+        </AnchorPane>
+    </top>
+    <center>
+        <!--分割面板-->
+        <SplitPane >
+            <!--左侧的导航菜单部分-->
+            <AnchorPane minWidth="300" maxWidth="300"   >
+                <!--采用风琴面板实现-->
+                <Accordion AnchorPane.leftAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <panes>
+                        <!--由标题面板组成，里面嵌入VBox，实现一级目录和二级目录效果-->
+                        <TitledPane alignment="TOP_LEFT" text="商品类别管理">
+                            <VBox minHeight="100" spacing="10"  >
+                                <!--点击该按钮，右侧切换商品类别数据-->
+                                <Button text="商品类别" />
+                                <Button text="分类统计"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="商品信息管理">
+                            <VBox minHeight="100" spacing="10" >
+                                <!--点击该按钮，右侧切换图书数据-->
+                                <Button text="商品信息" />
+                                <Button text="统计分析"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="会员管理">
+                            <VBox minHeight="130" spacing="10">
+                                <Button text="会员信息"/>
+                                <Button text="统计分析"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="账单管理">
+                            <VBox minHeight="130" spacing="10" >
+                                <Button text="收银小票"/>
+                                <Button text="收银明细"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="系统维护">
+                            <VBox minHeight="130" spacing="10" >
+                                <Button text="系统初始化"/>
+                                <Button text="数据备份"/>
+                                <Button text="主题设置"/>
+                            </VBox>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </AnchorPane>
+            <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED" styleClass="default-theme">
+                <StackPane fx:id="mainContainer" minWidth="1060">
+                    <!--加载外部的fxml文件，显示默认的主体内容-->
+                    <fx:include source="default.fxml"/>
+                    <padding>
+                        <Insets top="10" left="30" bottom="5" right="10"/>
+                    </padding>
+                </StackPane>
+            </ScrollPane>
+            <padding>
+                <Insets top="10"/>
+            </padding>
+        </SplitPane>
+    </center>
+
+</BorderPane>
+

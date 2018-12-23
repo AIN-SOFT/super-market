@@ -5,10 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="530.0" prefWidth="790.0" style="-fx-background-color: #F2F2F2;"
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.soft1841.sm.controller.LoginController">
+   <ImageView>
+      <Image url="/img/89.png"/>
+   </ImageView>
    <children>
       <Label layoutX="262.0" layoutY="178.0" text="工号：">
          <font>
@@ -20,10 +25,11 @@
             <Font size="19.0" />
          </font></Label>
       <PasswordField layoutX="334.0" layoutY="242.0" fx:id="passwordField"/>
-      <Button onAction="#login" layoutX="304.0" layoutY="315.0" mnemonicParsing="false" styleClass="login-btn" text="登密陆"/>
-      <HBox prefHeight="82.0" prefWidth="790.0" style="-fx-background-color: #00bfff;">
+      <Button onAction="#login" layoutX="304.0" layoutY="315.0" mnemonicParsing="false"
+              styleClass="login-btn" text="登陆"/>
+      <HBox prefHeight="82.0" prefWidth="790.0" style="-fx-background-color: #9fa294;">
          <children>
-            <Label text="       超市收银管理系统登陆" textFill="#357e8a">
+            <Label text="       五行Java收银系统后台" textFill="#8a8270">
                <font>
                   <Font size="58.0" />
                </font>
@@ -37,12 +43,12 @@
             <String fx:value="btn-basic" />
          </styleClass>
       </Button>
-      <Label layoutX="262.0" layoutY="96.0" text="请输入您的工号和密码" textFill="#ab9f9f">
+      <Label layoutX="262.0" layoutY="96.0" text="请输入您的工号和密码" textFill="#ab543c">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="349.0" layoutY="417.0" text="忘记密码？" textAlignment="CENTER" textFill="#b9b4b4">
+      <Label layoutX="349.0" layoutY="417.0" text="忘记密码？" textAlignment="CENTER" textFill="#b93b31">
          <font>
             <Font size="21.0" />
          </font>
