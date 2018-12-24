@@ -50,34 +50,34 @@
                         <TitledPane alignment="TOP_LEFT" text="商品类别管理" >
                             <VBox minHeight="100" spacing="10"  >
                                 <!--点击该按钮，右侧切换商品类别数据-->
-                                <Button text="商品类别" onAction="#listType"/>
-                                <Button text="分类统计"/>
+                                <Button styleClass="menu-btn" text="商品类别" onAction="#listType"/>
+                                <Button styleClass="menu-btn" text="分类统计"/>
                             </VBox>
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="商品信息管理">
                             <VBox minHeight="100" spacing="10" >
                                 <!--点击该按钮，右侧切换图书数据-->
-                                <Button text="商品信息" />
-                                <Button text="统计分析"/>
+                                <Button styleClass="menu-btn" text="商品信息" />
+                                <Button styleClass="menu-btn" text="统计分析"/>
                             </VBox>
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="会员管理">
                             <VBox minHeight="130" spacing="10">
-                                <Button text="会员信息"/>
-                                <Button text="统计分析"/>
+                                <Button styleClass="menu-btn" text="会员信息"/>
+                                <Button styleClass="menu-btn" text="统计分析"/>
                             </VBox>
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="账单管理">
                             <VBox minHeight="130" spacing="10" >
-                                <Button text="收银小票"/>
-                                <Button text="收银明细"/>
+                                <Button styleClass="menu-btn" text="收银小票"/>
+                                <Button styleClass="menu-btn" text="收银明细"/>
                             </VBox>
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="系统维护">
                             <VBox minHeight="130" spacing="10" >
-                                <Button text="系统初始化"/>
-                                <Button text="数据备份"/>
-                                <Button text="主题设置"/>
+                                <Button styleClass="menu-btn" text="系统初始化"/>
+                                <Button styleClass="menu-btn" text="数据备份"/>
+                                <Button styleClass="menu-btn" text="主题设置"/>
                             </VBox>
                         </TitledPane>
                     </panes>

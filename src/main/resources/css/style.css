@@ -1,6 +1,106 @@
-.login-btn{
-    -fx-background-color:#1E90FF;
-    -fx-text-fill: white ;
-    -fx-font-size: 16px;
+.button{
+
+    -fx-font-size: 14px;
+    /*背景色*/
+    -fx-border-color: rgb(163, 141, 200);
+    -fx-background-color: rgb(183, 200, 200);
+    -fx-pref-width: 95px;
+    -fx-pref-height: 35px;
     -fx-cursor: hand;
+}
+.root{
+    -fx-font-size: 16px;
+}
+.menu-btn{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 35px;
+    -fx-background-color: rgb(40, 43, 51);
+    -fx-text-fill: rgb(191, 192, 194);
+
+}
+.menu-btn:hover{
+    -fx-background-color: rgb(162, 138, 155);
+}
+/*输入框样式*/
+.input-group {
+    /*对齐方式*/
+    -fx-text-alignment: left;
+    /*内容显示方式*/
+    -fx-content-display: inline-block;
+    /*合适高度*/
+    -fx-pref-height: 30px;
+    /*边框色*/
+    -fx-border-color: rgb(230, 230, 230);
+    /*提示文字颜色*/
+    -fx-prompt-text-fill: rgb(162, 162, 162);
+    /*输入文字颜色*/
+    -fx-text-fill: rgb(110, 110, 110);
+    /*边框圆角*/
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    /*内边距*/
+    -fx-padding: 5 5 5 5;
+    /*鼠标形状*/
+    -fx-cursor: pointer;
+}
+/*默认主题*/
+.default-theme {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-text-fill: rgb(110, 110, 110);
+}
+/*深灰色主题*/
+.dark-gray-theme {
+    -fx-background-color: rgb(58, 61, 73);
+}
+/*深色主题*/
+.dark-theme {
+    -fx-background-color: rgb(40, 43, 51);
+}
+/*绿色主题*/
+.green-theme {
+    -fx-background-color: #968c7e;
+    -fx-text-fill: #fff;
+    -fx-pref-width: 150px;
+}
+/*灰色主题*/
+.gray-theme {
+    -fx-background-color: rgb(210, 210, 210);
+    -fx-text-fill: #fff;
+}
+
+/*风琴标题面板背景色*/
+.titled-pane > .title {
+    -fx-background-color: rgb(162, 161, 143);
+    -fx-padding: 30 10 10 10;
+}
+.box {
+    -fx-border-color: rgb(158, 162, 160);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 5 5 5;
+}
+
+/*边框圆角按钮*/
+.button-radius-large{
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+/*鼠标覆盖上去为暖色*/
+.menu8-btn:hover {
+    -fx-background-color: rgb(254, 177, 106);
+    -fx-text-fill: #fff
+}
+/*边框圆角按钮*/
+.btn-radius-large{
+    -fx-border-radius: 40px;
+    -fx-background-radius: 50px;
+}
+/*鼠标覆盖上去为红色*/
+.menu1-btn:hover{
+    -fx-background-color: rgb(182, 124, 213);
+    -fx-text-fill: #fff;
+}
+.menu-btn{
+    -fx-background-color: rgb(161, 162, 147);
 }
