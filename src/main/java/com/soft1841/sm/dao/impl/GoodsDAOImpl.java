@@ -6,9 +6,9 @@ import cn.hutool.db.Entity;
 import cn.hutool.db.sql.Condition;
 import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.entity.Goods;
-
 import java.sql.SQLException;
 import java.util.List;
+
 
 public class GoodsDAOImpl implements GoodsDAO  {
 
