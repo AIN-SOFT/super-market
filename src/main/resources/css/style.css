@@ -4,3 +4,6 @@
     -fx-font-size: 16px;
     -fx-cursor: hand;
 }
+.warning-theme{
+    -fx-background-color: #f00fff;
+}

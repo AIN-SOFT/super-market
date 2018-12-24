@@ -47,10 +47,10 @@
                            AnchorPane.topAnchor="0.0">
                     <panes>
                         <!--由标题面板组成，里面嵌入VBox，实现一级目录和二级目录效果-->
-                        <TitledPane alignment="TOP_LEFT" text="商品类别管理">
+                        <TitledPane alignment="TOP_LEFT" text="商品类别管理" >
                             <VBox minHeight="100" spacing="10"  >
                                 <!--点击该按钮，右侧切换商品类别数据-->
-                                <Button text="商品类别" />
+                                <Button text="商品类别" onAction="#listType"/>
                                 <Button text="分类统计"/>
                             </VBox>
                         </TitledPane>

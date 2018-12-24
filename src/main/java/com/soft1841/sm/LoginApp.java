@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class LoginApp extends Application {
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("超市收银系统 ");
