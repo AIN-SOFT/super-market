@@ -24,13 +24,13 @@
                 <Image url="/img/topbj.jpg"/>
             </ImageView>
             <!--点击这个文字显示默认主页数据-->
-            <Label text="超市后台管理系统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+            <Label text="五行java收银系统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
                 <!--字体特效-->
                 <effect>
                     <Reflection bottomOpacity="0.3" fraction="0.8" topOffset="-2.0"/>
                 </effect>
                 <font>
-                    <Font name="System Bold" size="26.0"/>
+                    <Font name="System Bold" size="20"/>
                 </font>
             </Label>
             <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"/>
