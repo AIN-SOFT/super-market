@@ -6,10 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * 登陆界面控制台
+ */
 public class LoginController {
     @FXML
     private TextField accountField;
@@ -19,7 +21,7 @@ public class LoginController {
     public void login()throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
-        if ("wuxingjava".equals(account) && "111111".equals(password)) {
+        if ("0001".equals(account) && "2018".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("恭喜你登录成功!");
