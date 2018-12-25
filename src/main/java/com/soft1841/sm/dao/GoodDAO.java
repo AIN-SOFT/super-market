@@ -1,7 +1,7 @@
 package com.soft1841.sm.dao;
 
 import cn.hutool.db.Entity;
-import com.soft1841.sm.entity.Goods;
+import com.soft1841.sm.entity.Good;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 商品DAO接口
  */
-public interface GoodsDAO {
+public interface GoodDAO {
     /**
      * 新增商品，返回自增主键
      *
@@ -17,7 +17,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    Long insertGoods(Goods goods) throws SQLException;
+    Long insertGoods(Good goods) throws SQLException;
 
     /**
      * 根据id删除商品
@@ -33,7 +33,7 @@ public interface GoodsDAO {
      * @param
      * @return
      */
-    int updateGoods(Goods goods) throws SQLException;
+    int updateGoods(Good goods) throws SQLException;
 
 
     /**

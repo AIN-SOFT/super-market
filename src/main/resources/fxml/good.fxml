@@ -5,6 +5,6 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.GoodsController ">
+            fx:controller="com.soft1841.sm.controller.GoodController ">
 
 </AnchorPane>

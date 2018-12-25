@@ -4,9 +4,7 @@
     -fx-font-size: 16px;
     -fx-cursor: hand;
 }
-.warning-theme{
-    -fx-background-color: #f00fff;
-}
+
 .box {
     -fx-border-color: rgb(162, 162, 162);
     -fx-border-radius: 5px;

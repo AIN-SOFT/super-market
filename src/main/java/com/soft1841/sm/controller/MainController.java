@@ -34,7 +34,7 @@ public class MainController implements Initializable {
 
     //显示商品数据
     public void listGoods() throws Exception {
-        switchView("goods.fxml");
+        switchView("good.fxml");
     }
 
     //显示Vip的数据
