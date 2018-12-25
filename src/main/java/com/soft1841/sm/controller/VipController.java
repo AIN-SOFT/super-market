@@ -1,4 +1,8 @@
 package com.soft1841.sm.controller;
+/**
+ * 会员休息管理模块中的会员信息展示
+ * @侯粤嘉
+ */
 
 import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.VipDAO;
@@ -61,7 +65,7 @@ public class VipController implements Initializable {
         for (Entity entity:vipList) {
             HBox hBox = new HBox();
             //设置个人水平盒子
-            hBox.setPrefSize(300, 240);
+            hBox.setPrefSize(340, 260);
             //设置内边距
             hBox.setSpacing(25);
             hBox.setPadding(new Insets(20, 20, 20, 20));
@@ -78,17 +82,29 @@ public class VipController implements Initializable {
             pictureImg.setFitHeight(100);
             //给头像设置圆形效果
             Circle circle = new Circle();
-            circle.setCenterX(40);
-            circle.setCenterY(40);
+            circle.setCenterX(50);
+            circle.setCenterY(50);
             circle.setRadius(40);
             pictureImg.setClip(circle);
+            Label vipnamelabel = new Label("VIP");
             //头像加入左边盒子
-            leftBox.getChildren().add(pictureImg);
+            leftBox.getChildren().addAll(pictureImg,vipnamelabel);
             hBox.getChildren().add(leftBox);
+            //创建中间垂直盒子
+            VBox centerBox = new VBox();
+            centerBox.setSpacing(10);
+            centerBox.setAlignment(Pos.TOP_LEFT);
+            Label mingzilabel = new Label("姓名：");
+            Label nianfenlabel = new Label("年份:");
+            Label jflabel    = new Label("积分:");
+            Label dianhualabel  = new Label("电话:");
+            Label dizhilabel  = new Label("地址：");
+            centerBox.getChildren().addAll(mingzilabel,nianfenlabel,jflabel,dianhualabel,dizhilabel);
+            hBox.getChildren().add(centerBox);
             //创建右边垂直布局盒子
             VBox rightBox = new VBox();
             rightBox.setSpacing(10);
-            rightBox.setAlignment(Pos.TOP_CENTER);
+            rightBox.setAlignment(Pos.TOP_LEFT);
             Label namelabel = new Label(entity.getStr("name"));//会员名字
             Label yearlabel = new Label(entity.getStr("year"));//会员年份
             Label jifenlabel = new Label(entity.getStr("jifen"));//会员积分
@@ -140,7 +156,7 @@ public class VipController implements Initializable {
         TextField jifenField = new TextField("新增会员的积分");
         TextField yearField = new TextField("新增会员的年限");
         TextField mobileField = new TextField("请输入手机号码");
-        Button addBtn = new Button("新增");
+        Button addBtn = new Button("确认新增");
         addBtn.getStyleClass().add("brown-theme");
         vBox.getChildren().addAll(nameField,pictureField,datePicker,jifenField,yearField,addressField,mobileField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);

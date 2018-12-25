@@ -17,8 +17,6 @@ public class SellerServiceImpl implements SellerService {
             seller = sellerDAO.getSellerByNumber(number);
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (NullPointerException e){
-
         }
         //根据工号查找成功
         if (seller != null) {
@@ -27,6 +25,9 @@ public class SellerServiceImpl implements SellerService {
                 return true;
             }
         }
+
+
+
         return false;
     }
 }
