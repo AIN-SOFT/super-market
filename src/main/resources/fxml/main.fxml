@@ -63,7 +63,7 @@
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="会员管理">
                             <VBox minHeight="130" spacing="10">
-                                <Button text="会员信息"/>
+                                <Button text="会员信息" onAction="#listVip"/>
                                 <Button text="统计分析"/>
                             </VBox>
                         </TitledPane>

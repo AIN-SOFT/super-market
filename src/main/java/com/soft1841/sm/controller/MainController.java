@@ -8,8 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -33,6 +33,11 @@ public class MainController implements Initializable {
     //显示商品数据
     public void listGoods() throws Exception {
         switchView("goods.fxml");
+    }
+
+    //显示Vip的信息
+    public  void listVip() throws Exception {
+        switchView("Vip.fxml");
     }
 
 

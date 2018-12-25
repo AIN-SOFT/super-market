@@ -4,3 +4,15 @@
     -fx-font-size: 16px;
     -fx-cursor: hand;
 }
+<<<<<<< Updated upstream
+=======
+.warning-theme{
+    -fx-background-color: #f00fff;
+}
+.box {
+    -fx-border-color: rgb(162, 162, 162);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 5 5 5;
+}
+>>>>>>> Stashed changes
