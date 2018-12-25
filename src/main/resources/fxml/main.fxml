@@ -67,6 +67,14 @@
                                 <Button text="统计分析"/>
                             </VBox>
                         </TitledPane>
+
+                        <TitledPane alignment="TOP_LEFT" text="工作人员管理">
+                            <VBox minHeight="130" spacing="10">
+                                <Button text="收银员信息"/>
+                                <Button text="管理员信息"/>
+                            </VBox>
+                        </TitledPane>
+
                         <TitledPane alignment="TOP_LEFT" text="账单管理">
                             <VBox minHeight="130" spacing="10" >
                                 <Button text="收银小票"/>
