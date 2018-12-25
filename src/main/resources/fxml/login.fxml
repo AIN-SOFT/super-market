@@ -29,7 +29,7 @@
               styleClass="login-btn" text="登陆"/>
       <HBox prefHeight="82.0" prefWidth="790.0" style="-fx-background-color: #9fa294;">
          <children>
-            <Label text="       五行Java收银系统后台" textFill="#8a8270">
+            <Label text="  五行Java超市后台管理系统" textFill="#8a8270">
                <font>
                   <Font size="58.0" />
                </font>

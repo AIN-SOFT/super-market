@@ -19,7 +19,9 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
- * 商品类别控制台
+ * 商品类别
+ * @auther 许源
+ * 2018年12月25日
  */
 public class TypeController implements Initializable {
     @FXML

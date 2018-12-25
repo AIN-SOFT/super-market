@@ -1,4 +1,9 @@
 package com.soft1841.sm.service;
+/**
+ * login测试类
+ * @auther 徐鹏
+ * 2018年12月24日
+ */
 
 import com.soft1841.sm.utils.ServiceFactory;
 import org.junit.Test;

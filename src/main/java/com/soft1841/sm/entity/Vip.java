@@ -1,5 +1,10 @@
 package com.soft1841.sm.entity;
 
+/**
+ * Vip 实体类
+ * @auther 侯粤嘉
+ * 2918年12月24日
+ */
 public class Vip {
     private String id;
     private String name;

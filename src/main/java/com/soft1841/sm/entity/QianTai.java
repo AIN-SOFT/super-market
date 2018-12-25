@@ -1,15 +1,15 @@
 package com.soft1841.sm.entity;
 
 /**
- * seller实体类
+ * 前台实体类
  */
-public class Seller {
+public class QianTai {
     private Long id;
     private String number ;
     private String password;
     private String name;
 
-    public Seller(Long id, String number, String password, String name) {
+    public QianTai(Long id, String number, String password, String name) {
         this.id = id;
         this.number = number;
         this.password = password;
@@ -50,7 +50,7 @@ public class Seller {
 
     @Override
     public String toString() {
-        return "Seller{" +
+        return "QianTai{" +
                 "id=" + id +
                 ", number='" + number + '\'' +
                 ", password='" + password + '\'' +
@@ -58,4 +58,3 @@ public class Seller {
                 '}';
     }
 }
-

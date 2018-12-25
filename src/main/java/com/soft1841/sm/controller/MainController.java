@@ -13,7 +13,9 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
- * 主界面
+ * 后台主界面
+ * @auther 徐鹏
+ * 2018年12月24日
  */
 public class MainController implements Initializable {
     @FXML
@@ -35,7 +37,7 @@ public class MainController implements Initializable {
         switchView("goods.fxml");
     }
 
-    //显示Vip的信息
+    //显示Vip的数据
     public  void listVip() throws Exception {
         switchView("Vip.fxml");
     }

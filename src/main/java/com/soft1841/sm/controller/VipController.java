@@ -28,6 +28,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Vip控制台
+ * @auther 侯粤嘉
+ * 2018年12月24日
+ */
 public class VipController implements Initializable {
     @FXML
     private FlowPane vipPane;

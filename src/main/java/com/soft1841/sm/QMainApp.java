@@ -7,15 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * 后台主界面App
- * @auther 徐鹏
- * 2018年12月24日
+ * 前台主界面App
  */
-public class MainApp extends Application {
+public class QMainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("超市后台系统");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        primaryStage.setTitle("超市前台收银系统");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/qmain.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         primaryStage.setMaximized(true);
@@ -27,4 +25,3 @@ public class MainApp extends Application {
         launch(args);
     }
 }
-

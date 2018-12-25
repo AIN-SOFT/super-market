@@ -6,6 +6,11 @@ import com.soft1841.sm.entity.Vip;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Vip 的DAO 接口
+ * @auther 侯粤嘉
+ * 2018年12月24日
+ */
 public interface VipDAO {
     /**
      * 查询所有Vip的信息

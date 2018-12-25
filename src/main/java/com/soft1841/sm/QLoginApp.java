@@ -8,15 +8,14 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- * 后台登陆主程序
- * @auther 徐鹏
- * 2018年12月24日
+ * 前台登陆主程序
+ * 2018年12月25日
  */
-public class LoginApp extends Application {
+public class QLoginApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("超市后台管理系统 ");
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+        primaryStage.setTitle("超市前台收银系统 ");
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/qlogin.fxml"));
         primaryStage.getIcons().add(new Image("/img/001.jpg"));
         Scene scene = new Scene(root, 790, 520);
         scene.getStylesheets().add("/css/style.css");
@@ -27,3 +26,4 @@ public class LoginApp extends Application {
         launch(args);
     }
 }
+

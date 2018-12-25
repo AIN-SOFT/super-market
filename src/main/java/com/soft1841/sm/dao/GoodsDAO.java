@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * 商品接口
+ * 商品DAO接口
  */
 public interface GoodsDAO {
     /**

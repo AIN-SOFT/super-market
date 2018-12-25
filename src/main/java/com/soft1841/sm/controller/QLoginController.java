@@ -1,6 +1,6 @@
 package com.soft1841.sm.controller;
 
-import com.soft1841.sm.service.SellerService;
+import com.soft1841.sm.service.QianTaiService;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,35 +12,38 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
- * 后台登陆界面
+ * 前台登陆界面
  * @auther 徐鹏
- * 2018年12月24日
+ * 2018年12月25日
  */
-public class LoginController {
+public class QLoginController {
     @FXML
     private TextField accountField;
+
     @FXML
     private PasswordField passwordField;
 
-    private SellerService sellerService = ServiceFactory.getSellerServiceInstance();
+    //新增001
+    private QianTaiService qianTaiService = ServiceFactory.getQianTaiServiceInstance();
 
-    public void login()throws Exception {
-        String account = accountField.getText().trim();
+    public void qiantailogin()throws Exception {
+        String account =accountField.getText().trim();
         String password = passwordField.getText().trim();
+
         //调用service的登录功能
-        boolean flag = sellerService.login(account,password);
+        boolean flag1 = qianTaiService.qiantailogin(account,password);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("提示");
 
-        if(flag){
+        if(flag1){
             alert.setContentText("恭喜你登录成功!");
             alert.showAndWait();
             Stage mainStage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
-            BorderPane  root = fxmlLoader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/qmain.fxml"));
+            BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
-            mainStage.setTitle("超市收银系统");
+            mainStage.setTitle("超市前台收银系统");
             mainStage.setMaximized(true);
             mainStage.setScene(scene);
             mainStage.show();
