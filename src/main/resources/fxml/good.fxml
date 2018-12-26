@@ -3,8 +3,34 @@
 
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.GoodController ">
-
+            fx:controller="com.soft1841.sm.controller.GoodController">
+    <TableView fx:id="goodTable" prefWidth="1000">
+        <columns>
+            <TableColumn text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="商品名称">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="价格">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="库存">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stock"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
 </AnchorPane>
