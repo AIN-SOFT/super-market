@@ -38,6 +38,6 @@ public interface TypeDAO {
      * @param id
      * @return
      */
-    Entity getTypeById(int id) throws SQLException;
+    Entity getTypeById(long id) throws SQLException;
 
 }

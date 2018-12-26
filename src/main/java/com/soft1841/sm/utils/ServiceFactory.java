@@ -2,10 +2,18 @@ package com.soft1841.sm.utils;
 
 import com.soft1841.sm.service.QianTaiService;
 import com.soft1841.sm.service.SellerService;
+import com.soft1841.sm.service.TypeService;
 import com.soft1841.sm.service.impl.QianTaiServiceImpl;
 import com.soft1841.sm.service.impl.SellerServiceImpl;
+import com.soft1841.sm.service.impl.TypeServiceImpl;
 
+/**
+ * 业务逻辑工厂
+ */
 public class ServiceFactory {
+    public static TypeService getTypeServiceInstance() {
+        return new TypeServiceImpl();
+    }
     public static SellerService getSellerServiceInstance() {
         return new SellerServiceImpl();
     }
