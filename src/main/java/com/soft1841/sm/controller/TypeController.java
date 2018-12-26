@@ -3,8 +3,10 @@ package com.soft1841.sm.controller;
 import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Type;
+import com.soft1841.sm.service.TypeService;
 import com.soft1841.sm.utils.ComponentUtil;
 import com.soft1841.sm.utils.DAOFactory;
+import com.soft1841.sm.utils.ServiceFactory;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -29,7 +31,8 @@ public class TypeController implements Initializable {
 
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
 
-    private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
+//    private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
+    private TypeService typeService = ServiceFactory.getTypeServiceInstance();
 
     private List<Entity> entityList = null;
 
@@ -59,22 +62,16 @@ public class TypeController implements Initializable {
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == ButtonType.OK){
                         typeData.remove(type);
-                        try {
-                            typeDAO.deleteTypeById(type.getId());
-                        } catch (SQLException e) {
-                            e.printStackTrace();
-                        }
+                        //typeDAO.deleteTypeById(type.getId());
+                        typeService.deleteType(type.getId());
                     }
                 });
             }
         });
         //删除列加入表格
         typeTable.getColumns().add(delCol);
-        try {
-            entityList = typeDAO.selectAllTypes();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        //            entityList = typeDAO.selectAllTypes();
+        entityList = typeService.getAllTypes();
         showTypeData(entityList);
     }
     public void addType() {
@@ -89,11 +86,8 @@ public class TypeController implements Initializable {
             Type type = new Type();
             type.setTypeName(typeName);
             long id = 0;
-            try {
-                id = typeDAO.insertType(type);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            //                id = typeDAO.insertType(type);
+            id = typeService.addType(type);
             type.setId(id);
             typeData.add(type);
 
