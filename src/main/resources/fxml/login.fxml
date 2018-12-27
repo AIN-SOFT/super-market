@@ -29,4 +29,5 @@
       <Button text="取消" styleClass="button-blue " />
    </HBox>
    <Label text="忘记密码？"  AnchorPane.topAnchor="450" AnchorPane.leftAnchor="450" styleClass="label-big-red " />
+
 </AnchorPane>

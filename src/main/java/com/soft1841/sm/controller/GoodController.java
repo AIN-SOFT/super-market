@@ -33,7 +33,7 @@ public class GoodController implements Initializable{
 //    private ObservableList<Type> typeDate = FXCollections.observableArrayList();
 
 
-    private GoodService goodService= ServiceFactory.getGoodServiceInstance();
+    private GoodService goodService= ServiceFactory.getGoodsServiceInstance();
     //类别TypeService对象
 //    private TypeService typeService = ServiceFactory.getTypeServiceInstance();
 
