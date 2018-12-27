@@ -6,7 +6,9 @@ import com.soft1841.sm.entity.Type;
 import java.util.List;
 
 /**
- * 商品类业务逻辑接口
+ * 商品类别业务逻辑接口
+ * @auther 徐鹏
+ * 2018年12月24日
  */
 public interface TypeService {
     /**

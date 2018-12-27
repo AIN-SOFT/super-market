@@ -17,7 +17,7 @@ public class QLoginApp extends Application {
         primaryStage.setTitle("超市前台收银系统 ");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/qlogin.fxml"));
         primaryStage.getIcons().add(new Image("/img/001.jpg"));
-        Scene scene = new Scene(root, 790, 520);
+        Scene scene = new Scene(root, 960, 600);
         scene.getStylesheets().add("/css/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();

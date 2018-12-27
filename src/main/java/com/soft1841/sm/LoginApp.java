@@ -18,7 +18,7 @@ public class LoginApp extends Application {
         primaryStage.setTitle("超市后台管理系统 ");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         primaryStage.getIcons().add(new Image("/img/001.jpg"));
-        Scene scene = new Scene(root, 790, 520);
+        Scene scene = new Scene(root, 960, 590);
         scene.getStylesheets().add("/css/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();

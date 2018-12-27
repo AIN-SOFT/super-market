@@ -4,10 +4,46 @@
     -fx-font-size: 16px;
     -fx-cursor: hand;
 }
-
-.box {
+.box{
     -fx-border-color: rgb(162, 162, 162);
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-padding: 5 5 5 5;
+}
+.label-big-smallblack{
+    -fx-font-size: 50px;
+    -fx-text-fill: #008B8B;
+}
+.label-small-red{
+    -fx-font-size: 16px;
+    -fx-text-fill:  #FF4500;
+}
+.label-big-red{
+    -fx-font-size: 20px;
+    -fx-text-fill: #A52A2A;
+}
+.label-small-black{
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+}
+.button-blue{
+    -fx-background-color: #4169E1;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+    -fx-pref-height: 29px;
+    -fx-border-radius: 8px;
+    -fx-background-radius:8px;
+}
+.button:hover {
+    -fx-opacity: 0.8;
+}
+.button-small-DoderBlue{
+    -fx-background-color: #1E90FF;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+    -fx-pref-height: 29px;
+    -fx-border-radius: 8px;
+    -fx-background-radius:8px;
 }

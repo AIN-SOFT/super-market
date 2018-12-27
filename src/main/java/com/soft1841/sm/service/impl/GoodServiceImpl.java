@@ -9,6 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商品的业务逻辑接口的实现类
+ * @auther 许源
+ * 2018年12月26日
+ */
 public class GoodServiceImpl implements GoodService {
         private GoodDAO goodDAO = DAOFactory.getGoodDAOInstance();
     @Override

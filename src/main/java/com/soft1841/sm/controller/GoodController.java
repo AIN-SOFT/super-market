@@ -57,8 +57,6 @@ public class GoodController implements Initializable{
         //将实体集合作为参数，调用显示数据的方法，可以在界面的表格中显示商品模型集合的值
         showGoodsData(goodsList);
 
-//
-//                });
             }
 
     //显示商品表格数据的方法

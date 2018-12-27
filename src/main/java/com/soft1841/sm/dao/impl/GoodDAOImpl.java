@@ -9,6 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商品DAO 的实现类
+ * @auther 许源
+ * 1028年12月26日
+ */
 public class GoodDAOImpl implements GoodDAO {
 
     @Override

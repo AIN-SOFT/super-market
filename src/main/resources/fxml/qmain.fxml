@@ -6,7 +6,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.QMainController">
     <top>
-        <Label text="eryteutru"/>
+        <Label text="此部分还未提交" style="-fx-font-size: 30px" />
     </top>
 
 </BorderPane>

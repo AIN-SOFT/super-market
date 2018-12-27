@@ -6,8 +6,10 @@ import com.soft1841.sm.entity.Good;
 import java.sql.SQLException;
 import java.util.List;
 
-/**许源
+/**
  * 商品DAO接口
+ * @auther 许源
+ * 2018年12月26日
  */
 public interface GoodDAO {
     /**

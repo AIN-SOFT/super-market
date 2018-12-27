@@ -2,6 +2,8 @@ package com.soft1841.sm.entity;
 
 /**
  * 前台实体类
+ * @auther 徐鹏
+ * 2018年12月25日
  */
 public class QianTai {
     private Long id;

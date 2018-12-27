@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商品类别的业务逻辑接口的实现类
+ * @auther 徐鹏
+ * 2018年12月25日
+ */
 public class TypeServiceImpl implements TypeService {
     private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
 

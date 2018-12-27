@@ -9,6 +9,7 @@ import com.soft1841.sm.dao.impl.*;
 public class DAOFactory {
     /**
      * 静态方法，返回TypeDAO实现类的对象
+     * 商品类别
      * @return
      */
     public static TypeDAO getTypeDAOInstance() {
@@ -16,7 +17,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *后台
      * @return
      */
     public static SellerDAO getSellerDAOInstance() {
@@ -24,7 +25,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *VIP
      * @return
      */
     public static VipDAO getVipDAOInstance() {
@@ -32,7 +33,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *前台
      * @return
      */
     public static QianTaiDAO getQianTaiDAOInstance(){
@@ -40,7 +41,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *商品
      * @return
      */
     public static GoodDAO getGoodDAOInstance(){

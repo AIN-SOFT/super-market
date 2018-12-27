@@ -2,6 +2,8 @@ package com.soft1841.sm.entity;
 
 /**
  * seller实体类
+ * @auther 徐鹏
+ * 2018年12月25日
  */
 public class Seller {
     private Long id;

@@ -13,15 +13,34 @@ import com.soft1841.sm.service.impl.TypeServiceImpl;
  * 业务逻辑工厂
  */
 public class ServiceFactory {
+    /**
+     * 商品类别
+     * @return
+     */
     public static TypeService getTypeServiceInstance() {
         return new TypeServiceImpl();
     }
+
+    /**
+     * 后台
+     * @return
+     */
     public static SellerService getSellerServiceInstance() {
         return new SellerServiceImpl();
     }
-    public static QianTaiService getQianTaiServiceInstance(){
+
+    /**
+     * 前台
+     * @return
+     */
+    public static QianTaiService getQianTaiServiceInstance() {
         return new QianTaiServiceImpl();
     }
+
+    /**
+     * s商品
+     * @return
+     */
     public static GoodService getGoodServiceInstance(){
         return new GoodServiceImpl();
     }

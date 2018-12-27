@@ -6,6 +6,11 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * 商品实体类
+ * @auther 许源
+ * 2018年12月26日
+ */
 
 
 public class Good {
