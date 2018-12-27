@@ -6,7 +6,7 @@ package com.soft1841.sm.entity;
  * 2918年12月24日
  */
 public class Vip {
-    private String id;
+    private Long id;
     private String name;
     private String year;
     private String picture;
@@ -14,7 +14,7 @@ public class Vip {
     private String mobile;
     private String address;
 
-    public Vip(String id, String name, String year, String picture, String jifen, String mobile, String address) {
+    public Vip(Long id, String name, String year, String picture, String jifen, String mobile, String address) {
         this.id = id;
         this.name = name;
         this.year = year;
@@ -23,14 +23,15 @@ public class Vip {
         this.mobile = mobile;
         this.address = address;
     }
+
     public Vip() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -80,5 +81,18 @@ public class Vip {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Vip{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                ", picture='" + picture + '\'' +
+                ", jifen='" + jifen + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

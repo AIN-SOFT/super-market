@@ -11,3 +11,13 @@
     -fx-background-radius: 5px;
     -fx-padding: 5 5 5 5;
 }
+/*鼠标覆盖上去为蓝色*/
+.menu0-btn:hover {
+    -fx-background-color: rgb(24, 175, 183);
+    -fx-text-fill: #fff
+}
+/*绿色主题*/
+.green-theme{
+    -fx-background-color: rgb(24, 175, 183);
+    -fx-text-fill: #fff;
+}

@@ -22,6 +22,7 @@ private TypeService typeService = (TypeService) ServiceFactory.getTypeServiceIns
         System.out.println(typeService.getType(1));
     }
 
+
     @Test
     public void addType() {
         Type type = new Type();
@@ -30,7 +31,6 @@ private TypeService typeService = (TypeService) ServiceFactory.getTypeServiceIns
     }
 
     @Test
-    public void deleteType() {
-        typeService.deleteType(2);
+    public void deleteType() { typeService.deleteType(2);
     }
 }
