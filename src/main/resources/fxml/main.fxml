@@ -57,7 +57,7 @@
                         <TitledPane alignment="TOP_LEFT" text="商品信息管理">
                             <VBox minHeight="100" spacing="10" >
                                 <!--点击该按钮，右侧切换图书数据-->
-                                <Button text="商品信息" />
+                                <Button text="商品信息" onAction="#listGoods"/>
                                 <Button text="统计分析"/>
                             </VBox>
                         </TitledPane>

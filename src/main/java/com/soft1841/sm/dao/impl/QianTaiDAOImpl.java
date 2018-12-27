@@ -7,6 +7,11 @@ import com.soft1841.sm.entity.QianTai;
 
 import java.sql.SQLException;
 
+/**
+ * 前台DAO的实现类
+ * @auther 徐鹏
+ * 2018年12月25日
+ */
 public class QianTaiDAOImpl implements QianTaiDAO {
     @Override
     public QianTai getQianTaiByNumber(String number) throws SQLException {

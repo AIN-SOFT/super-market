@@ -1,13 +1,7 @@
 package com.soft1841.sm.utils;
 
-import com.soft1841.sm.dao.QianTaiDAO;
-import com.soft1841.sm.dao.SellerDAO;
-import com.soft1841.sm.dao.TypeDAO;
-import com.soft1841.sm.dao.impl.QianTaiDAOImpl;
-import com.soft1841.sm.dao.impl.SellerDAOImpl;
-import com.soft1841.sm.dao.VipDAO;
-import com.soft1841.sm.dao.impl.TypeDAOImpl;
-import com.soft1841.sm.dao.impl.VipDAOImpl;
+import com.soft1841.sm.dao.*;
+import com.soft1841.sm.dao.impl.*;
 
 /**
  * 工厂类，用静态方法来生成各个DAO实例
@@ -15,6 +9,7 @@ import com.soft1841.sm.dao.impl.VipDAOImpl;
 public class DAOFactory {
     /**
      * 静态方法，返回TypeDAO实现类的对象
+     * 商品类别
      * @return
      */
     public static TypeDAO getTypeDAOInstance() {
@@ -22,7 +17,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *后台
      * @return
      */
     public static SellerDAO getSellerDAOInstance() {
@@ -30,7 +25,7 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *VIP
      * @return
      */
     public static VipDAO getVipDAOInstance() {
@@ -38,10 +33,18 @@ public class DAOFactory {
     }
 
     /**
-     *
+     *前台
      * @return
      */
     public static QianTaiDAO getQianTaiDAOInstance(){
         return new QianTaiDAOImpl();
+    }
+
+    /**
+     *商品
+     * @return
+     */
+    public static GoodDAO getGoodDAOInstance(){
+        return new GoodDAOImpl();
     }
 }

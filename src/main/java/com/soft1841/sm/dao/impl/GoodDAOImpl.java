@@ -1,55 +1,45 @@
 package com.soft1841.sm.dao.impl;
 
-
 import cn.hutool.db.Db;
 import cn.hutool.db.Entity;
-import cn.hutool.db.sql.Condition;
 import com.soft1841.sm.dao.GoodDAO;
 import com.soft1841.sm.entity.Good;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 商品DAO 的实现类
+ * @auther 许源
+ * 1028年12月26日
+ */
 public class GoodDAOImpl implements GoodDAO {
 
     @Override
-    public Long insertGoods(Good goods) throws SQLException {
-        return null;
+    public List<Good> selectAllGoods() throws SQLException {
+        List<Entity> entityList = Db.use().query("SELECT * FROM t_goods ");
+        List<Good> goodList = new ArrayList<>();
+        for (Entity entity : entityList) {
+            goodList.add(convertGood(entity));
+        }
+        return goodList;
     }
 
-    @Override
-    public int deleteGoodsById(long id) throws SQLException {
-        return 0;
+    /**
+     * @param entity
+     * @return
+     */
+    private Good convertGood(Entity entity) {
+        Good good = new Good();
+        good.setId(entity.getLong("id"));
+        good.setTypeId(entity.getLong("type_id"));
+        good.setName(entity.getStr("name"));
+        good.setPrice(entity.getDouble("price"));
+        good.setCover(entity.getStr("cover"));
+        good.setStock(entity.getInt("stock"));
+        good.setSummary(entity.getStr("summary"));
+        return good;
     }
 
-    @Override
-    public int updateGoods(Good goods) throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public List<Entity> selectAllGoods() throws SQLException {
-        return null;
-    }
-
-    @Override
-    public Entity getGoodsById(long id) throws SQLException {
-        return null;
-    }
-
-    @Override
-    public List<Entity> selectGoodsLike(String keywords) throws SQLException {
-        return null;
-    }
-
-    @Override
-    public List<Entity> selectGoodsByTypeId(long typeId) throws SQLException {
-        return null;
-    }
-
-    @Override
-    public int countByType(long typeId) throws SQLException {
-        return 0;
-    }
 }

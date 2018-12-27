@@ -7,6 +7,11 @@ import com.soft1841.sm.entity.Seller;
 
 import java.sql.SQLException;
 
+/**
+ * 后台登陆的DAO 实现类
+ * @auther 徐鹏
+ * 2018年12月24日
+ */
 public class SellerDAOImpl implements SellerDAO {
 
     @Override

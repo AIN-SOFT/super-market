@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<?import javafx.scene.layout.*?>-->
-<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.VBox?>
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.QMainController">
+    <top>
+        <Label text="eryteutru"/>
+    </top>
 
-    <HBox spacing="25">
-        <Label text="系统维护" textFill="black" />
-        <Label text="基础资料" textFill="black" />
-        <Label text="业务管理" textFill="black" />
-        <Label text="业务报表" textFill="black" />
-        <Label text="帮助" textFill="black" />
-    </HBox>
-    <FlowPane alignment="CENTER" prefHeight="50.0" prefWidth="894.0"
-              style="-fx-background-color: #30CCFF"
-              AnchorPane.leftAnchor="1" AnchorPane.rightAnchor="1" AnchorPane.topAnchor="20.0">
-        <Label text="五行Java超市收银界面" />
-    </FlowPane>
-    <HBox spacing="100" AnchorPane.topAnchor="80">
-        <Button text="商品名称" prefWidth="120" styleClass="green-theme" />
-        <Button text="商品价格" prefWidth="120" styleClass="green-theme"/>
-        <Button text="商品数量" prefWidth="120" styleClass="green-theme"/>
-        <Button text="商品库存" prefWidth="120" styleClass="green-theme"/>
-        <Button text="小计（元）" prefWidth="120" styleClass="green-theme"/>
-    </HBox>
-    <HBox prefWidth="1000" AnchorPane.bottomAnchor="50" spacing="30">
-        <VBox spacing="10" prefWidth="250">
-            <TextField text="数量（件）：" prefWidth="250"/>
-            <TextField text="条形码：" prefWidth="250"/>
-        </VBox>
-        <VBox spacing="10" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="350">
-            <Button text="会员号：" prefWidth="150"  styleClass="menu0-btn"/>
-            <Button text="余额："  prefWidth="150"  styleClass="menu0-btn"/>
-        </VBox>
-        <Button text="结算：" prefWidth="150" prefHeight="70"
-                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="550"
-        styleClass="menu0-btn"/>
-        <Button text="总金额：" prefWidth="170" prefHeight="70"
-                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="680"
-        styleClass="menu0-btn"/>
-    </HBox>
-    <Label text="用心打造的小型超市收银系统" AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="10"/>
-</AnchorPane>
+</BorderPane>

@@ -7,6 +7,11 @@ import com.soft1841.sm.utils.DAOFactory;
 
 import java.sql.SQLException;
 
+/**
+ * 后台的业务逻辑接口的实现类
+ * @auther 徐鹏
+ * 2018年12月25日
+ */
 public class SellerServiceImpl implements SellerService {
     private SellerDAO sellerDAO =  DAOFactory.getSellerDAOInstance();
 

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.layout.*?>
+
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Button?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.QLoginController">
+
     <TextField text="账号" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="300" fx:id="accountField"/>
     <PasswordField AnchorPane.topAnchor="150" AnchorPane.leftAnchor="300" fx:id="passwordField"/>
     <Button onAction="#qiantailogin" text="登陆" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="350"/>

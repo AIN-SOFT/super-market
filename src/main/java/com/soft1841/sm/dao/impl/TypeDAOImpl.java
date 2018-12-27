@@ -8,6 +8,11 @@ import com.soft1841.sm.entity.Type;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * 商品类别的DAO实现类
+ * @auther 徐鹏
+ *2018年12月24日
+ */
 public class TypeDAOImpl implements TypeDAO {
 
     @Override

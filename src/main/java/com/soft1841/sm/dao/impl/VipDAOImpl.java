@@ -9,6 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * vipDAO DE 实现类
+ * @auther 侯粤嘉
+ * 2018年12月26 日
+ */
 public class VipDAOImpl implements VipDAO {
     @Override
     public List<Vip> selectVip() throws SQLException {
