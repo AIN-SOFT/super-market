@@ -11,6 +11,7 @@ import javafx.stage.Stage;
  * 前台登陆主程序
  * 2018年12月25日
  */
+
 public class QLoginApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{

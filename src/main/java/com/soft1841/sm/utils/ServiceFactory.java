@@ -18,5 +18,4 @@ public class ServiceFactory {
     }
     public static VipService getVipServiceInstance(){return new VipServiceImpl();}
     public static GoodService getGoodsServiceInstance(){return  new GoodServiceImpl(); }
-
 }

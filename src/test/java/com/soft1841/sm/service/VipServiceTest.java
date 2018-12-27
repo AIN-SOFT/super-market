@@ -1,5 +1,4 @@
 package com.soft1841.sm.service;
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Vip;
 import com.soft1841.sm.utils.ServiceFactory;
 import org.junit.Test;
