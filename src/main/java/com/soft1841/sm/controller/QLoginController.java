@@ -41,7 +41,7 @@ public class QLoginController {
             alert.showAndWait();
             Stage mainStage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/qmain.fxml"));
-            AnchorPane root = fxmlLoader.load();
+            BorderPane  root = fxmlLoader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
             mainStage.setTitle("超市前台收银系统");
