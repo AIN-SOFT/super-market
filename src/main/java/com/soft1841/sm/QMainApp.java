@@ -15,8 +15,8 @@ public class QMainApp extends Application {
         primaryStage.setTitle("超市前台收银系统");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/qmain.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        primaryStage.setMaximized(true);
+        Scene scene = new Scene(root,1000,700);
+//        primaryStage.setMaximized(true);
         scene.getStylesheets().add(MainApp.class.getResource("/css/style.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();

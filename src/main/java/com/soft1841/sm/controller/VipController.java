@@ -1,7 +1,8 @@
 package com.soft1841.sm.controller;
 /**
  * 会员信息管理模块中的会员信息展示
- * @侯粤嘉
+ * @auther 侯粤嘉
+ * 2018年12月26日
  */
 
 import com.soft1841.sm.entity.Vip;
@@ -26,17 +27,9 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.*;
 
-/**
- * Vip控制台
- * @auther 侯粤嘉
- * 2018年12月24日
- */
 public class VipController implements Initializable {
     @FXML
     private FlowPane vipPane;
-
-//    private VipDAO vipDAO = DAOFactory.getVipDAOInstance();
-//    List<Entity> vipList = new ArrayList<>();
 
     private VipService vipService = ServiceFactory.getVipServiceInstance();
     private List<Vip> vipList= new ArrayList<>();
@@ -48,7 +41,6 @@ public class VipController implements Initializable {
         //读取数据库信息
         showVip(vipList);
     }
-
     private void showVip(List<Vip> vipList) {
         //清除之前内容
         vipPane.getChildren().clear();
@@ -70,12 +62,12 @@ public class VipController implements Initializable {
             leftBox.setSpacing(10);
             //对齐方式
             leftBox.setAlignment(Pos.TOP_CENTER);
-//            头像图片  如果本地文件则url:"/img?
+            //头像图片  如果本地文件则url:"/img?
             Image image = new Image(vip.getPicture());
             ImageView pictureImg = new ImageView(image);
             pictureImg.setFitWidth(100);
             pictureImg.setFitHeight(100);
-//            给头像设置圆形效果
+           //给头像设置圆形效果
             Circle circle = new Circle();
             circle.setCenterX(50);
             circle.setCenterY(50);

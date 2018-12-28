@@ -9,7 +9,7 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.GoodController">
-    <TableView fx:id="goodTable" prefWidth="1000">
+    <TableView fx:id="goodTable" prefWidth="1800" prefHeight="1000" >
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>
