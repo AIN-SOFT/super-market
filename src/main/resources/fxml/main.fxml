@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.image.ImageView?>
@@ -20,7 +19,8 @@
                 <Image url="/img/topbj.jpg"/>
             </ImageView>
             <!--点击这个文字显示默认主页数据-->
-            <Label text="超市后台信息管理系统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+            <Label text="超市后台信息管理系统" AnchorPane.topAnchor="20"
+                   AnchorPane.leftAnchor="10" styleClass="label-big-smallblack">
                 <!--字体特效-->
                 <effect>
                     <Reflection bottomOpacity="0.3" fraction="0.8" topOffset="-2.0"/>
@@ -29,66 +29,68 @@
                     <Font name="System Bold" size="20"/>
                 </font>
             </Label>
-            <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"/>
+            <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" styleClass="button-blue"/>
         </AnchorPane>
     </top>
     <center>
-        <VBox spacing="30" >
+        <VBox spacing="15" >
         <VBox>
            <Label text="."/>
         </VBox>
         <VBox spacing="50" >
         <AnchorPane >
             <!--指标行的间距-->
-        <HBox spacing="150">
-
+        <HBox spacing="100">
+            <VBox>
+                <Label text="."/>
+            </VBox>
         <VBox spacing="20" >
         <ImageView >
             <Image url="/img/shangpinleibie.png" />
         </ImageView>
-            <Button text="商 品 类 别" onAction="#listType"/>
+            <Button text="商 品 类 别" onAction="#listType" styleClass="button-blue" />
         </VBox>
         <VBox spacing="20" >
             <ImageView>
                 <Image url="/img/shangpintongji.png"/>
             </ImageView>
-            <Button text="类别统计分析" />
+            <Button text="类别统计分析" styleClass="button-blue"/>
         </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/shangpinguanli.png "/>
                 </ImageView>
-                <Button text="商 品 信 息" onAction="#listGoods"/>
+                <Button text="商 品 信 息" onAction="#listGoods" styleClass="button-blue"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/shangpinxinxitongji.png "/>
                 </ImageView>
-                <Button text="商品信息统计" />
+                <Button text="商品信息统计" styleClass="button-blue"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/vip.png "/>
                 </ImageView>
-                <Button text="会 员 信 息" onAction="#listVip"/>
+                <Button text="会 员 信 息" onAction="#listVip" styleClass="button-blue"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/shouyinzhongxin.png"/>
                 </ImageView>
-                <Button text="收 银 员 信 息" />
+                <Button text="收 银 员 信 息" styleClass="button-blue"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/guanliyuan.png"/>
                 </ImageView>
-                <Button text="管 理 员 信 息" />
+                <Button text="管 理 员 信 息" styleClass="button-blue"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
                     <Image url="/img/set.png"/>
                 </ImageView>
-                <Button text="系 统 设 置" />
+                <Button text="系 统 设 置" styleClass="button-blue" />
             </VBox>
         </HBox>
         </AnchorPane>
@@ -105,6 +107,5 @@
         </VBox>
         </VBox>
     </center>
-
 </BorderPane>
 

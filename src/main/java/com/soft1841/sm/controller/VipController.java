@@ -139,8 +139,8 @@ public class VipController implements Initializable {
         TextField jifenField = new TextField("新增会员的积分");
         TextField yearField = new TextField("新增会员的年限");
         TextField mobileField = new TextField("请输入手机号码");
-        Button addBtn = new Button("确认新增");
-        addBtn.getStyleClass().add("brown-theme");
+        Button addBtn = new Button("确认新增" );
+        addBtn.getStyleClass().add("button-blue");
         vBox.getChildren().addAll(nameField,pictureField,datePicker,jifenField,yearField,addressField,mobileField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);
         stage.setScene(scene);
@@ -160,7 +160,6 @@ public class VipController implements Initializable {
             vip.setJifen(jifenString);
             vip.setYear(yearString);
             System.out.println(vip.getName() + vip.getAddress() + vip.getPicture()+vip.getJifen()+vip.getYear());
-
                 vipService.addVip(vip);
             stage.close();
             vipList = vipService.getAllVips();

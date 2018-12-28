@@ -10,5 +10,5 @@
               AnchorPane.rightAnchor="10"
               AnchorPane.leftAnchor="10"/>
     <Button text="新增会员" AnchorPane.topAnchor="20"
-              AnchorPane.leftAnchor="10" onAction="#addVip"/>
+              AnchorPane.leftAnchor="10" onAction="#addVip" styleClass="button-blue"/>
 </AnchorPane>

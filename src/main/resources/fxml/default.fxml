@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -12,7 +11,7 @@
     <ImageView fitWidth="1920" fitHeight="950">
         <Image url="/img/houtaibeijing.jpg"/>
     </ImageView>
-    <Label text="努  力  做  好  手  头  的  工  作" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="500"
-           style="-fx-font-size: 30px"/>
+    <Label text="努  力  做  好  手  头  的  工  作" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="300"
+           style="-fx-font-size: 100px"/>
 
 </AnchorPane>
