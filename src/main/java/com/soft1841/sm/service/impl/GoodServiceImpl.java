@@ -26,4 +26,78 @@ public class GoodServiceImpl implements GoodService {
         }
         return goodList;
     }
-}
+
+    @Override
+    public Long addGoods(Good good) {
+        long result = 0;
+        try {
+            result = goodDAO.insertGood(good);
+        } catch (SQLException e) {
+            System.err.println("新增商品出现异常");
+        }
+        return result;
+    }
+
+    @Override
+    public void deleteGood(long id) {
+        try {
+            goodDAO.deleteGoodById(id);
+        } catch (SQLException e) {
+            System.err.println("删除商品出现异常");
+        }
+    }
+
+    @Override
+    public void updateGood(Good good) {
+        try {
+            goodDAO.updateGood(good);
+        } catch (SQLException e) {
+            System.err.println("修改商品信息出现异常");
+        }
+
+    }
+
+    @Override
+    public Good getGood(long id) {
+       Good good  = new Good();
+        try {
+            good = goodDAO.getGoodById(id);
+        } catch (SQLException e) {
+            System.err.println("查询单个商品信息出现异常");
+        }
+        return good;
+    }
+
+    @Override
+    public List<Good> getGoodsLike(String keywords) {
+        List<Good> goodList = new ArrayList<>();
+        try {
+            goodList= goodDAO.selectGoodLike(keywords);
+        } catch (SQLException e) {
+            System.err.println("根据关键字查询商品信息出现异常");
+        }
+        return goodList;
+    }
+
+    @Override
+    public List<Good> getGoodsByTypeId(long typeId) {
+        List<Good> goodList = new ArrayList<>();
+        try {
+            goodList = goodDAO.selectGoodByTypeId(typeId);
+        } catch (SQLException e) {
+            System.err.println("根据类别查询S商品信息出现异常");
+        }
+        return goodList;
+    }
+
+    @Override
+    public int countByType(long typeId) {
+        int result = 0;
+        try {
+            result = goodDAO.countByType(typeId);
+        } catch (SQLException e) {
+            System.err.println("根据类别统计商品信息出现异常");
+        }
+        return result;
+    }
+    }

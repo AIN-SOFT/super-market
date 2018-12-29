@@ -13,7 +13,7 @@ public class TypeServiceTest {
 private TypeService typeService = (TypeService) ServiceFactory.getTypeServiceInstance();
     @Test
     public void getAllTypes() {
-        List<Entity> typeList = typeService.getAllTypes();
+        List<Type> typeList = typeService.getAllTypes();
         typeList.forEach(type-> System.out.println(type));
         }
 

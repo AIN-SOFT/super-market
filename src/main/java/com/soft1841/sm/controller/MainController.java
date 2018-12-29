@@ -22,10 +22,6 @@ public class MainController implements Initializable {
     private StackPane mainContainer;
     public void initialize(URL location, ResourceBundle resources) {
     }
-    //显示默认主页数据
-    public void listDefault() throws Exception {
-        switchView("default.fxml");
-    }
 
     //显示商品类别数据
     public void listType() throws Exception {

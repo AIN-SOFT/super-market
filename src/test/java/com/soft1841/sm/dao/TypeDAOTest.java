@@ -31,13 +31,13 @@ public class TypeDAOTest {
 
     @Test
     public void selectAllTypes() throws SQLException {
-        List<Entity> typeList = typeDAO.selectAllTypes();
+        List<Type> typeList = typeDAO.selectAllTypes();
         typeList.forEach(entity -> System.out.println(entity));
     }
 
     @Test
     public void getTypeById() throws  SQLException {
-        Entity type = typeDAO.getTypeById(2);
+        Type type = typeDAO.getTypeById(2);
         System.out.println(type);
     }
 }

@@ -6,10 +6,22 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.GoodController">
-    <TableView fx:id="goodTable" prefWidth="1800" prefHeight="1000" >
+    <HBox alignment="BOTTOM_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" spacing="10">
+        <Button styleClass="green-theme,btn-radius" text="添加图书" onAction="#newGoodStage"/>
+    </HBox>
+    <HBox alignment="CENTER" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="10" spacing="10">
+        <ComboBox promptText="选择图书类别" fx:id="typeComboBox" prefWidth="150"/>
+        <TextField promptText="请输入关键词" fx:id="keywordsField"/>
+        <Button styleClass="green-theme" text="搜索" onAction="#search"/>
+    </HBox>
+    <TableView fx:id="goodTable" prefWidth="1500"
+               AnchorPane.topAnchor="110" AnchorPane.leftAnchor="10">
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>

@@ -1,6 +1,5 @@
 package com.soft1841.sm.service.impl;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.TypeService;
@@ -19,8 +18,8 @@ public class TypeServiceImpl implements TypeService {
     private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
 
     @Override
-    public List<Entity> getAllTypes() {
-        List<Entity> typeList = new ArrayList<>();
+    public List<Type> getAllTypes() {
+        List<Type> typeList = new ArrayList<>();
         try {
             //调用底层DAO的查询所有类别的方法，得到一个typeList，薄层封装
             typeList = typeDAO.selectAllTypes();
@@ -32,8 +31,8 @@ public class TypeServiceImpl implements TypeService {
     }
 
     @Override
-    public Entity getType(long id) {
-        Entity type = new Entity();
+    public Type getType(long id) {
+        Type type = new Type();
         try {
             type = typeDAO.getTypeById(id);
         } catch (SQLException e) {
