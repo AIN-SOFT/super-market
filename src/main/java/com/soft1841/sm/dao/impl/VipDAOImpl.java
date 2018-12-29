@@ -41,15 +41,15 @@ public class VipDAOImpl implements VipDAO {
     }
 
     @Override
-    public long insertVip(Vip vip) throws SQLException {
+    public Long insertVip(Vip vip) throws SQLException {
         return Db.use().insertForGeneratedKey(
                 Entity.create("t_vip")
-                        .set("name",vip.getName())
+                      .set("name",vip.getName())
                         .set("year",vip.getYear())
                         .set("picture",vip.getPicture())
-                        .set("jifen",vip.getJifen())
-                        .set("mobile",vip.getMobile())
-                        .set("address",vip.getAddress())
+                       .set("jifen",vip.getJifen())
+                       .set("mobile",vip.getMobile())
+                       .set("address",vip.getAddress())
         );
     }
 

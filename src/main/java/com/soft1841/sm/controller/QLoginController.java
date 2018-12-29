@@ -30,7 +30,6 @@ public class QLoginController {
     public void qiantailogin()throws Exception {
         String account =accountField.getText().trim();
         String password = passwordField.getText().trim();
-
         //调用service的登录功能
         boolean flag1 = qianTaiService.qiantailogin(account,password);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -45,7 +44,6 @@ public class QLoginController {
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
             mainStage.setTitle("超市前台收银系统");
-//            mainStage.setMaximized(true);
             mainStage.setScene(scene);
             mainStage.show();
             Stage loginStage = (Stage) accountField.getScene().getWindow();

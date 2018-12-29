@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.sm.controller.GuanLiController">
+    <FlowPane fx:id="guanliPane" hgap="10" vgap="10"
+          AnchorPane.topAnchor="80"
+          AnchorPane.rightAnchor="10"
+          AnchorPane.leftAnchor="10"/>
+     <Button text="新增管理员" AnchorPane.topAnchor="20"
+             AnchorPane.leftAnchor="10" onAction="#addGuanLi"/>
+</AnchorPane>

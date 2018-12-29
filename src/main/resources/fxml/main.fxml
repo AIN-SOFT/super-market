@@ -84,7 +84,7 @@
                 <ImageView>
                     <Image url="/img/guanliyuan.png"/>
                 </ImageView>
-                <Button text="管 理 员 信 息" styleClass="button-blue"/>
+                <Button text="管 理 员 信 息" styleClass="button-blue" onAction="#listGuanLi"/>
             </VBox>
             <VBox spacing="20" >
                 <ImageView>
@@ -94,6 +94,7 @@
             </VBox>
         </HBox>
         </AnchorPane>
+
             <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
                         vbarPolicy="AS_NEEDED" styleClass="default-theme">
                 <StackPane fx:id="mainContainer" minWidth="1060">

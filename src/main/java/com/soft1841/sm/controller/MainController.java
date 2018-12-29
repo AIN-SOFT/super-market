@@ -41,6 +41,10 @@ public class MainController implements Initializable {
     public  void listVip() throws Exception {
         switchView("Vip.fxml");
     }
+    //显示管理员的信息
+    public void listGuanLi() throws Exception{
+        switchView("guanli.fxml");
+    }
 
 
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容

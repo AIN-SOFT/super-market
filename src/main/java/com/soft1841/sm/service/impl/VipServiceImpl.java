@@ -5,11 +5,10 @@ import com.soft1841.sm.dao.VipDAO;
 import com.soft1841.sm.entity.Vip;
 import com.soft1841.sm.service.VipService;
 import com.soft1841.sm.utils.DAOFactory;
-
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class VipServiceImpl implements VipService {
 
@@ -48,12 +47,12 @@ public class VipServiceImpl implements VipService {
 
     @Override
     public Long addVip(Vip vip) {
-        long result = 0;
+        long result = 0 ;
         try {
             result = vipDAO.insertVip(vip);
         }catch (SQLException e){
-            System.out.println("新型vip信息出项异常");
+            System.out.println("新增vip出项异常");
         }
-        return result;
+        return result ;
     }
 }

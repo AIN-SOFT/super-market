@@ -30,7 +30,6 @@ import java.util.*;
 public class VipController implements Initializable {
     @FXML
     private FlowPane vipPane;
-
     private VipService vipService = ServiceFactory.getVipServiceInstance();
     private List<Vip> vipList= new ArrayList<>();
 
@@ -49,24 +48,24 @@ public class VipController implements Initializable {
         vipPane.getChildren().remove(observableList);
 
         for (Vip vip:vipList) {
-            HBox hBox = new HBox();
-            //设置个人水平盒子
-            hBox.setPrefSize(340, 260);
-            //设置内边距
-            hBox.setSpacing(25);
-            hBox.setPadding(new Insets(20, 20, 20, 20));
-            //美化水平盒子  调用css中的box
-            hBox.getStyleClass().add("box");
-            //创建左侧的垂直布局
-            VBox leftBox = new VBox();
-            leftBox.setSpacing(10);
-            //对齐方式
-            leftBox.setAlignment(Pos.TOP_CENTER);
-            //头像图片  如果本地文件则url:"/img?
-            Image image = new Image(vip.getPicture());
-            ImageView pictureImg = new ImageView(image);
-            pictureImg.setFitWidth(100);
-            pictureImg.setFitHeight(100);
+                HBox hBox = new HBox();
+                //设置个人水平盒子
+                hBox.setPrefSize(340, 260);
+                //设置内边距
+                hBox.setSpacing(25);
+                hBox.setPadding(new Insets(20, 20, 20, 20));
+                //美化水平盒子  调用css中的box
+                hBox.getStyleClass().add("box");
+                //创建左侧的垂直布局
+                VBox leftBox = new VBox();
+                leftBox.setSpacing(10);
+                //对齐方式
+                leftBox.setAlignment(Pos.TOP_CENTER);
+                //头像图片  如果本地文件则url:"/img?
+                Image image = new Image(vip.getPicture());
+                ImageView pictureImg = new ImageView(image);
+                pictureImg.setFitWidth(100);
+                pictureImg.setFitHeight(100);
            //给头像设置圆形效果
             Circle circle = new Circle();
             circle.setCenterX(50);
@@ -106,16 +105,16 @@ public class VipController implements Initializable {
                 alert.setTitle("确认对话框");
                 alert.setContentText("确定删除该会员信息吗？");
                 //2点击了“确认”按钮
-                Optional<ButtonType> result = alert.showAndWait();
-                if (result.get() == ButtonType.OK) {
-                    //得到个人的id
-                    long id = vip.getId();
-                        //调用readerDAO的删除方法
-                        vipService.deleteVip(id);
-                        //从流式面板里面删除掉
-                        vipPane.getChildren().remove(hBox);
-                }
-            });
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                //得到个人的id
+                long id = vip.getId();
+                //调用readerDAO的删除方法
+                vipService.deleteVip(id);
+                //从流式面板里面删除掉
+                vipPane.getChildren().remove(hBox);
+            }
+        });
             rightBox.getChildren().addAll(namelabel,yearlabel,jifenlabel,mobilelabel,addresslabel,button);
             hBox.getChildren().add(rightBox);
             vipPane.getChildren().add(hBox);
