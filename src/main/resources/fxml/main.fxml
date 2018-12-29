@@ -29,7 +29,8 @@
                     <Font name="System Bold" size="20"/>
                 </font>
             </Label>
-            <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" styleClass="button-blue"/>
+            <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"
+                    fx:id="closeButton" onAction="#closeButtonAction" styleClass="button-blue"/>
         </AnchorPane>
     </top>
     <center>
@@ -100,9 +101,6 @@
                 <StackPane fx:id="mainContainer" minWidth="1060">
                     <!--加载外部的fxml文件，显示默认的主体内容-->
                     <fx:include source="default.fxml"/>
-                    <!--<padding>-->
-                        <!--<Insets top="50" left="100" bottom="5" right="100"/>-->
-                    <!--</padding>-->
                 </StackPane>
             </ScrollPane>
         </VBox>

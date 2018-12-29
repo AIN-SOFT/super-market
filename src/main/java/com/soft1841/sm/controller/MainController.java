@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -20,6 +22,14 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
     @FXML
     private StackPane mainContainer;
+    //退出系统
+    @FXML
+    private javafx.scene.control.Button closeButton;
+    @FXML
+    private void closeButtonAction(){
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
     public void initialize(URL location, ResourceBundle resources) {
     }
 
@@ -41,7 +51,6 @@ public class MainController implements Initializable {
     public void listGuanLi() throws Exception{
         switchView("guanli.fxml");
     }
-
 
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {

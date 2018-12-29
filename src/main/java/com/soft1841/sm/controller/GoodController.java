@@ -238,5 +238,6 @@ public class GoodController implements Initializable {
 //        alert.setTitle("提示信息");
 //        alert.setHeaderText("商品数据已导出!请到F盘根目录查看!");
 //        alert.showAndWait();
+    //}
     }
 

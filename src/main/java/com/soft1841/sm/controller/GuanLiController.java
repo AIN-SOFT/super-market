@@ -41,7 +41,6 @@ public class GuanLiController implements Initializable {
         //读取数据库信息
         showGuanLi(guanliList);
     }
-
     private void showGuanLi(List<GuanLi> guanliList) {
         //清除之前内容
         guanliPane.getChildren().clear();
@@ -62,7 +61,7 @@ public class GuanLiController implements Initializable {
             leftBox.setSpacing(10);
             //对齐方式
             leftBox.setAlignment(Pos.TOP_CENTER);
-            //头像图片  如果本地文件则url:"/img?
+            //头像图片
             Image image = new Image(guanli.getPicture());
             ImageView pictureImg = new ImageView(image);
             pictureImg.setFitWidth(100);
@@ -96,7 +95,7 @@ public class GuanLiController implements Initializable {
             Label xuelilabel = new Label(guanli.getXueli());//管理员学历
             Label mobilelabel = new Label(guanli.getMobile());//管理员电话
             Button button = new Button("删除");
-            button.getStyleClass().add("menu1-btn");
+            button.getStyleClass().add("warning-theme");
             //点击删除按钮要做的事情
             button.setOnAction(event -> {
                 //1弹出一个确认的对话框
@@ -134,7 +133,7 @@ public class GuanLiController implements Initializable {
         TextField xueliField = new TextField("新增管理员的学历");
         TextField mobileField = new TextField("请输入手机号码");
         Button addBtn = new Button("确认新增");
-        addBtn.getStyleClass().add("brown-theme");
+        addBtn.getStyleClass().add("warm-theme");
         vBox.getChildren().addAll(nameField,xinbieField,xueliField,mobileField,pictureField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);
         stage.setScene(scene);

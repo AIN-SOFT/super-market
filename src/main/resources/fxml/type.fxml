@@ -3,15 +3,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.TypeController">
+
+<ImageView fitWidth="1900" fitHeight="690">
+    <Image url="/img/shangpingjiemianbeijing.jpg "/>
+</ImageView>
     <HBox AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" spacing="20">
         <Button text="添加商品类别"   onAction="#addType" styleClass="button-blue"/>
     </HBox>
     <!--表格视图，用来显示数据库中查询到的商品类别-->
-    <TableView fx:id="typeTable" prefWidth="900" prefHeight="200"
-               AnchorPane.leftAnchor="20" AnchorPane.topAnchor="50">
+    <TableView fx:id="typeTable" prefWidth="1200" prefHeight="320"
+               AnchorPane.leftAnchor="20" AnchorPane.topAnchor="50" >
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>

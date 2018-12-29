@@ -97,7 +97,7 @@ public class VipController implements Initializable {
             Label mobilelabel = new Label(vip.getMobile());//会员电话
             Label addresslabel = new Label(vip.getAddress());//会员地址
             Button button = new Button("删除");
-            button.getStyleClass().add("menu1-btn");
+            button.getStyleClass().add("warning-theme");
             //点击删除按钮要做的事情
             button.setOnAction(event -> {
                 //1弹出一个确认的对话框
@@ -124,7 +124,7 @@ public class VipController implements Initializable {
         Vip vip = new Vip();
         //新建一个舞台
         Stage stage = new Stage();
-        stage.setTitle("新增会员界面");
+        stage.setTitle("新增会员界9面");
         //创建一个垂直布局，用来放新增用户的各个组件
         VBox vBox = new VBox();
         vBox.setSpacing(10);
@@ -139,7 +139,7 @@ public class VipController implements Initializable {
         TextField yearField = new TextField("新增会员的年限");
         TextField mobileField = new TextField("请输入手机号码");
         Button addBtn = new Button("确认新增" );
-        addBtn.getStyleClass().add("button-blue");
+        addBtn.getStyleClass().add("warm-theme");
         vBox.getChildren().addAll(nameField,pictureField,datePicker,jifenField,yearField,addressField,mobileField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);
         stage.setScene(scene);

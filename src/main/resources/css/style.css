@@ -16,13 +16,18 @@
 }
 
 .button-blue{
-    -fx-text-alignment: center;
-    -fx-pref-height: 38px;
     -fx-font-size: 18px;
     -fx-background-color:  #1E90FF;
+    -fx-text-fill: #fff;
+}
+.button {
+    -fx-text-alignment: center;
+    -fx-pref-height: 38px;
+    -fx-padding: 0 18px;
+    -fx-border-style: none;
     -fx-cursor: hand;
-    -fx-border-radius: 10px;
-    -fx-background-radius: 10px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
 }
 .label-big-smallblack{
     -fx-font-size: 35px;
@@ -42,4 +47,52 @@
 }
 .theme-blue{
     -fx-background-color:  #1E90FF;
+    -fx-text-fill: #fff;
+}
+
+.dark-gray-theme {
+    -fx-background-color: rgb(58, 61, 73);
+}
+
+
+.dark-theme {
+    -fx-background-color: rgb(40, 43, 51);
+}
+
+/*新增商品界面的颜色*/
+.green-theme {
+    -fx-background-color: rgb(35, 210, 142);
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
+}
+
+.gray-theme {
+    -fx-background-color: rgb(210, 210, 210);
+    -fx-text-fill: #fff;
+}
+
+
+.warning-theme {
+    -fx-background-color: rgb(254, 87, 34);
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
+}
+
+.warm-theme {
+    -fx-background-color: rgb(254, 184, 0);
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
+}
+
+.blue-theme {
+    -fx-background-color: rgb(30, 158, 255);
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
+}
+/*表格内容居中显示*/
+.table-view .table-column {
+    -fx-alignment: center;
+}
+.flower-1{
+    -fx-cursor: hand;
 }
