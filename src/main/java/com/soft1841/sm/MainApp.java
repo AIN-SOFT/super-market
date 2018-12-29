@@ -1,12 +1,10 @@
 package com.soft1841.sm;
 
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 
 /**
  * 后台主界面App
