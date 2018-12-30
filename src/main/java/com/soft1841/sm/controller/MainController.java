@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import javax.crypto.interfaces.PBEKey;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -51,6 +52,7 @@ public class MainController implements Initializable {
     public void listGuanLi() throws Exception{
         switchView("guanli.fxml");
     }
+
 
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {

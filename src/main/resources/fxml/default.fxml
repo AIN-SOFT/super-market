@@ -4,18 +4,52 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.MainController">
-    <ImageView fitWidth="1920" fitHeight="950">
-        <Image url="/img/houtaibeijing.jpg"/>
-    </ImageView>
-    <Label text="努  力  做  好  手  头  的  工  作" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="300"
-           style="-fx-font-size: 100px"/>
-    <ImageView fitWidth="120" fitHeight="200" AnchorPane.bottomAnchor="300" AnchorPane.leftAnchor="50"
-    styleClass="flower-1" >
-        <Image url="/img/dongtai.gif"/>
-    </ImageView>
+            fx:controller="com.soft1841.sm.controller.DefaultController">
+    <HBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0" prefHeight="300" spacing="20">
+        <StackPane styleClass="box">
+            <ImageView fx:id="goodImg" fitWidth="600" fitHeight="300">
+            </ImageView>
+        </StackPane>
+        <GridPane hgap="20" vgap="20" prefHeight="300" prefWidth="360" styleClass="box">
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="box,green-theme" prefWidth="150"
+                       prefHeight="130">
+                <Label text="员工10人" styleClass="font-title"/>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="box,blue-theme" prefWidth="150"
+                       prefHeight="130">
+                <Label text="类别8种" styleClass="font-title"/>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="box,warm-theme" prefWidth="150"
+                       prefHeight="130">
+                <Label text="商品100种" styleClass="font-title"/>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="box,warning-theme" prefWidth="150"
+                       prefHeight="130">
+                <Label text="销售额2.3万" styleClass="font-title"/>
+            </StackPane>
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+        </GridPane>
+    </HBox>
+    <!--<StackPane AnchorPane.topAnchor="320" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" styleClass="box">-->
+        <!--<fx:include source="book_analysis.fxml"/>-->
+    <!--</StackPane>-->
+
+
+    <!--<ImageView fitWidth="1920" fitHeight="950">-->
+        <!--<Image url="/img/houtaibeijing.jpg"/>-->
+    <!--</ImageView>-->
+    <!--<Label text="努  力  做  好  手  头  的  工  作" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="300"-->
+           <!--style="-fx-font-size: 100px"/>-->
+    <!--<ImageView fitWidth="120" fitHeight="200" AnchorPane.bottomAnchor="300" AnchorPane.leftAnchor="50"-->
+    <!--styleClass="flower-1" >-->
+        <!--<Image url="/img/dongtai.gif"/>-->
+    <!--</ImageView>-->
 
 
 
