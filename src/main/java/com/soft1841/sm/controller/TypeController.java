@@ -86,7 +86,6 @@ public class TypeController implements Initializable {
         dialog.setHeaderText("新增商品类别");
         dialog.setContentText("请输入商品类别名称:");
         Optional<String> result = dialog.showAndWait();
-//        result.ifPresent(name -> System.out.println("你的输入： " + name));
         //确认输入了内容
         if (result.isPresent()) {
             //获得输入的内容
@@ -101,21 +100,8 @@ public class TypeController implements Initializable {
             typeData.add(type);
         }
     }
-
     private void showTypeData(List<Type> typeList) {
         typeData.addAll(typeList);
         typeTable.setItems(typeData);
     }
-
 }
-//    private void showTypeData(List<Type> entityList) {
-//        //遍历实体集合
-//        for (Entity entity : entityList) {
-//            Type type = new Type();
-//            type.setId(entity.getInt("id"));
-//            type.setTypeName(entity.getStr("type_name"));
-//            typeData.add(type);
-//        }
-//        typeTable.setItems(typeData);
-//    }
-//}
