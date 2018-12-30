@@ -12,12 +12,12 @@ import javafx.stage.Stage;
  * 2018年12月24日
  */
 public class MainApp extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+    @Override    public void start(Stage primaryStage) throws Exception {
+
         primaryStage.setTitle("超市后台系统");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,1200,1600);
         primaryStage.setMaximized(true);
         scene.getStylesheets().add(MainApp.class.getResource("/css/style.css").toExternalForm());
         primaryStage.setScene(scene);

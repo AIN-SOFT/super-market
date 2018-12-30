@@ -1,46 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.QMainController"
-            prefHeight="800.0" prefWidth="600.0">
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <HBox spacing="25">
-        <Label text="系统维护" textFill="black" />
-        <Label text="基础资料" textFill="black" />
-        <Label text="业务管理" textFill="black" />
-        <Label text="业务报表" textFill="black" />
-        <Label text="帮助" textFill="black" />
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.QMainController">
+    <HBox prefWidth="2000" spacing="180" style="-fx-background-color:rgb(227, 239, 255) ">
+        <HBox prefHeight="40" spacing="12">
+            <Label style="-fx-font-size: 20pX" text="商品条码/商品编号：" />
+            <TextField prefHeight="30" text="" />
+        </HBox>
+        <HBox prefHeight="40" spacing="12">
+            <Label style="-fx-font-size: 20px" text="导购员：" />
+            <TextField prefHeight="30" text="" />
+        </HBox>
+        <HBox prefHeight="40" spacing="2">
+            <Label prefHeight="27.0" prefWidth="128.0" style="-fx-font-size: 20px" text="小票流水号 ：" />
+            <TextField prefHeight="30.0" prefWidth="147.0" style="-fx-font-size: 15px" text="20181314" />
+        </HBox>
     </HBox>
-    <FlowPane  alignment="CENTER" prefHeight="50.0" prefWidth="894.0"
-               style="-fx-background-color: #30CCFF"
-               AnchorPane.leftAnchor="1" AnchorPane.rightAnchor="1" AnchorPane.topAnchor="20.0">
-        <Label text="五行Java超市收银界面" />
-    </FlowPane>
-    <HBox spacing="50" AnchorPane.topAnchor="80">
-        <Button text="商品名称" prefWidth="120"/>
-        <Button text="商品价格" prefWidth="120"/>
-        <Button text="商品数量" prefWidth="120"/>
-        <Button text="商品库存" prefWidth="120"/>
-        <Button text="小计（元）" prefWidth="120"/>
+    <HBox prefHeight="40" spacing="2">
+
     </HBox>
-    <HBox prefWidth="1000" AnchorPane.bottomAnchor="50" spacing="30">
-        <VBox spacing="10" prefWidth="250">
-            <TextField text="数量（件）：" prefWidth="250"/>
-            <TextField text="条形码：" prefWidth="250"/>
-        </VBox>
-        <VBox spacing="10" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="300">
-            <Button text="会员号：" prefWidth="150"/>
-            <Button text="余额："  prefWidth="150"/>
-        </VBox>
-        <Button text="结算：" prefWidth="150" prefHeight="70"
-                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="500"/>
-        <Button text="总金额：" prefWidth="170" prefHeight="70"
-                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="680"/>
-    </HBox>
-    <Label text="用心打造的小型超市收银系统" AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="10"/>
+
+    <AnchorPane layoutX="1.0" layoutY="431.0" prefHeight="202.0" prefWidth="537.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="1.0">
+      <HBox spacing="30" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="18">
+          <VBox spacing="30">
+              <Label prefHeight="40" styleClass="label-small-black" text="应收:" />
+              <Label prefHeight="40" styleClass="label-small-black" text="实收:" />
+              <Label prefHeight="39.0" prefWidth="41.0" styleClass="label-small-black" text="找零:" />
+          </VBox>
+          <VBox prefHeight="125.0" prefWidth="135.0" spacing="30">
+              <TextField prefHeight="40" prefWidth="70" />
+              <TextField prefHeight="40" prefWidth="120" />
+              <TextField prefHeight="31.0" prefWidth="135.0" />
+          </VBox>
+      </HBox>
+        <HBox spacing="50" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="200">
+            <HBox prefHeight="45.0" prefWidth="223.0" spacing="30">
+                <Label prefHeight="45.0" prefWidth="73.0" styleClass="label-small-black" text="会员号:">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+                <TextField prefHeight="36.0" prefWidth="142.0" />
+            </HBox>
+            <HBox spacing="30">
+                <Label prefHeight="37.0" prefWidth="80.0" styleClass="label-small-black " text="会员积分:" />
+                <TextField prefHeight="36.0" prefWidth="98.0" />
+            </HBox>
+        </HBox>
+        <Button layoutX="244.0" layoutY="90.0" prefHeight="13" prefWidth="100" style="-fx-background-color: #27a1bf;" text="打折(/)" textFill="#2b4a51" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="90.0" />
+        <Button layoutX="244.0" layoutY="154.0" prefHeight="36.0" prefWidth="133.0" style="-fx-background-color: #27a1bf;" text="打印小票(F4)" />
+        <Button layoutX="390.0" layoutY="154.0" prefHeight="36.0" prefWidth="135.0" style="-fx-background-color: #27a1bf;" text="退货(R)" />
+
+        <!--<HBox>-->
+            <!--<Label prefHeight="39.0" prefWidth="60" text="会员卡号："/>-->
+            <!--<TextField prefHeight="41.0" prefWidth="115.0" text="       "/>-->
+            <!--<Label prefHeight="38.0" prefWidth="55" text="条形码："/>-->
+            <!--<TextField prefHeight="42.0" prefWidth="115" text="       "/>-->
+
+        <!--</HBox>-->
+        <!--<HBox AnchorPane.leftAnchor="20" AnchorPane.topAnchor="180">-->
+            <!--<Label prefHeight="39.0" prefWidth="90.0" text="应收：" wrapText="true">-->
+                <!--<font>-->
+                    <!--<Font size="25.0"/>-->
+                <!--</font>-->
+            <!--</Label>-->
+            <!--<TextField prefHeight="41.0" prefWidth="127.0" text="       ">-->
+                <!--<font>-->
+                    <!--<Font size="9.0"/>-->
+                <!--</font>-->
+            <!--</TextField>-->
+        <!--</HBox>-->
+    </AnchorPane>
+    <TableView minHeight="320" AnchorPane.bottomAnchor="230" AnchorPane.leftAnchor="1" AnchorPane.rightAnchor="1" AnchorPane.topAnchor="39">
+        <columns>
+            <TableColumn text="商品ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="商品名称">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="单价">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="数量">
+                <cellValueFactory>
+                    <PropertyValueFactory property="number" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="小计">
+                <cellValueFactory>
+                    <PropertyValueFactory property="money" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" prefWidth="200" vgap="10" AnchorPane.leftAnchor="900" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="440">
+
+        <Button prefHeight="42.0" prefWidth="100" style="-fx-background-color: #B0483B;" text="现金支付" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button opacity="0.98" prefHeight="41.0" prefWidth="102.0" style="-fx-background-color: #C27F47;" text="1" textFill="#3e4340" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+
+        <Button prefHeight="41.0" prefWidth="85.0" style="-fx-background-color: #C27F47;" text="1" textFill="#212826" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button prefHeight="41.0" prefWidth="89.0" style="-fx-background-color: #C27F47;" text="2" textFill="#212826" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button prefHeight="41.0" prefWidth="87.0" style="-fx-background-color: #C27F47;" text="3" textFill="#262c2b" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <Button prefHeight="42.0" prefWidth="100" style="-fx-background-color: #B0483B;" text="支付宝" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #C27F47;" text="4" textFill="#404645" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: #C27F47;" text="5" textFill="#1a1b1b" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: #C27F47;" text="6" textFill="#171b1a" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <Button prefWidth="100" style="-fx-background-color: #B0483B;" text="微信支付" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #C27F47;" text="7" textFill="#212524" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button prefHeight="39.0" prefWidth="89.0" style="-fx-background-color: #C27F47;" text="8" textFill="#272c2b" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: #C27F47;" text="9" textFill="#353938" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button prefWidth="100" style="-fx-background-color: #287977;" text="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <!--清空第四行控件-->
+        <Button prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #47C2AB;" text="结算" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+        <Button prefWidth="100" style="-fx-background-color: #287977;" text="100" GridPane.rowIndex="3" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
 </AnchorPane>
