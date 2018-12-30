@@ -48,6 +48,13 @@ public class GuanLiController implements Initializable {
         ObservableList<Node> observableList = guanliPane.getChildren();
         guanliPane.getChildren().remove(observableList);
         for (GuanLi guanli:guanliList) {
+            Button button1= new Button(guanli.getName());
+            button1.getStyleClass().add("button-blue");
+            VBox vBox1 = new VBox();
+            vBox1.setSpacing(30);
+            vBox1.getChildren().add(button1);
+            //按钮点击显示管理员信息
+            button1.setOnAction(event -> {
             HBox hBox = new HBox();
             //设置个人水平盒子
             hBox.setPrefSize(340, 260);
@@ -97,7 +104,7 @@ public class GuanLiController implements Initializable {
             Button button = new Button("删除");
             button.getStyleClass().add("warning-theme");
             //点击删除按钮要做的事情
-            button.setOnAction(event -> {
+            button.setOnAction(event1 -> {
                 //1弹出一个确认的对话框
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("确认对话框");
@@ -116,6 +123,8 @@ public class GuanLiController implements Initializable {
             rightBox.getChildren().addAll(namelabel, xinbielabel, xuelilabel, mobilelabel, button);
             hBox.getChildren().add(rightBox);
             guanliPane.getChildren().add(hBox);
+            });
+            guanliPane.getChildren().add(vBox1);
         }
     }
     public void addGuanLi(){
@@ -134,7 +143,7 @@ public class GuanLiController implements Initializable {
         TextField mobileField = new TextField("请输入手机号码");
         Button addBtn = new Button("确认新增");
         addBtn.getStyleClass().add("warm-theme");
-        vBox.getChildren().addAll(nameField,xinbieField,xueliField,mobileField,pictureField,addBtn);
+        vBox.getChildren().addAll(nameField,xinbieField,pictureField,xueliField,mobileField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);
         stage.setScene(scene);
         stage.show();

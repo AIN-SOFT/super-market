@@ -20,7 +20,8 @@
             </ImageView>
             <!--点击这个文字显示默认主页数据-->
             <Label text="超市后台信息管理系统" AnchorPane.topAnchor="20"
-                   AnchorPane.leftAnchor="10" styleClass="label-big-smallblack">
+                   AnchorPane.leftAnchor="10" styleClass="label-big-smallblack"
+                   >
                 <!--字体特效-->
                 <effect>
                     <Reflection bottomOpacity="0.3" fraction="0.8" topOffset="-2.0"/>
@@ -29,6 +30,10 @@
                     <Font name="System Bold" size="20"/>
                 </font>
             </Label>
+            <!--系统时间-->
+            <Label fx:id="timeLabel" AnchorPane.topAnchor="70" AnchorPane.rightAnchor="20"
+                   styleClass="label-small-black"/>
+
             <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"
                     fx:id="closeButton" onAction="#closeButtonAction" styleClass="button-blue"/>
         </AnchorPane>
@@ -57,7 +62,7 @@
             </ImageView>
             <Button text="类别统计分析" styleClass="button-blue"/>
         </VBox>
-            <VBox spacing="20" >
+            <VBox spacing="20">
                 <ImageView>
                     <Image url="/img/shangpinguanli.png "/>
                 </ImageView>
