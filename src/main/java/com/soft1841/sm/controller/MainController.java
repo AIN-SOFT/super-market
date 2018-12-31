@@ -96,6 +96,10 @@ public class MainController implements Initializable {
     public void listGuanLi() throws Exception{
         switchView("guanli.fxml");
     }
+    //点击标题回到后台主界面
+    public void listDefault() throws Exception {
+        switchView("default.fxml");
+    }
 
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {

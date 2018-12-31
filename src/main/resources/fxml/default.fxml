@@ -36,6 +36,7 @@
                 <Insets top="20" left="20" right="20" bottom="20"/>
             </padding>
         </GridPane>
+
         <StackPane styleClass="box">
             <ImageView fx:id="goodImg" fitWidth="600" fitHeight="300">
             </ImageView>

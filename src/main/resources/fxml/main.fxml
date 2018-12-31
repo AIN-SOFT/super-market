@@ -21,7 +21,7 @@
             <!--点击这个文字显示默认主页数据-->
             <Label text="超市后台信息管理系统" AnchorPane.topAnchor="20"
                    AnchorPane.leftAnchor="10" styleClass="label-big-smallblack"
-                   >
+                   onMouseClicked="#listDefault">
                 <!--字体特效-->
                 <effect>
                     <Reflection bottomOpacity="0.3" fraction="0.8" topOffset="-2.0"/>

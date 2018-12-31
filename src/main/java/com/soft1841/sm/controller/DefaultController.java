@@ -16,7 +16,7 @@ public class DefaultController implements Initializable {
     String[] imgPath = {"shangpin1.jpg", "shangpin2.jpg", "shangpin3.jpg", "shangpin4.jpg", "shangpin5.jpg"};
     @FXML
     private ImageView GetiImg;
-    String[] imgPath1 = {"geti1.jpg", "geti2.jpg", "geti3.png", "geti4.jpg", "geti5.jpg"};
+    String[] imgPath1 = {"geti2.jpg",  "geti3.png", "geti1.jpg","geti4.jpg", "geti5.jpg"};
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
