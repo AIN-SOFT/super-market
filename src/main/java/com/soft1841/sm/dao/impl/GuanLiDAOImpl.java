@@ -20,7 +20,7 @@ public class GuanLiDAOImpl implements GuanLiDAO {
         List<Entity> entityList = Db.use().query("SELECT * FROM t_guanli");
         List<GuanLi> guanLiList = new ArrayList<>();
         //遍历entityList，转换为typeList
-        for (Entity entity:entityList) {
+        for (Entity entity : entityList) {
             guanLiList.add(convertGuanli(entity));
         }
         return guanLiList;
@@ -35,7 +35,7 @@ public class GuanLiDAOImpl implements GuanLiDAO {
     @Override
     public int deleteById(long id) throws SQLException {
         return Db.use().del(
-                Entity.create("t_guanli").set("id",id)
+                Entity.create("t_guanli").set("id", id)
         );
     }
 
@@ -43,13 +43,20 @@ public class GuanLiDAOImpl implements GuanLiDAO {
     public long insertGuanLi(GuanLi guanLi) throws SQLException {
         return Db.use().insertForGeneratedKey(
                 Entity.create("t_guanli")
-                        .set("name",guanLi.getName())
-                        .set("xinbie",guanLi.getXinbie())
-                        .set("picture",guanLi.getPicture())
-                        .set("xueli",guanLi.getXueli())
-                        .set("mobile",guanLi.getMobile())
+                        .set("name", guanLi.getName())
+                        .set("xinbie", guanLi.getXinbie())
+                        .set("picture", guanLi.getPicture())
+                        .set("xueli", guanLi.getXueli())
+                        .set("mobile", guanLi.getMobile())
         );
     }
+
+
+    @Override
+    public int countGuanLi() throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT (*) FROM t_guanli").intValue();
+    }
+
     private GuanLi convertGuanli(Entity entity) {
         GuanLi guanLi = new GuanLi();
         guanLi.setId(entity.getLong("id"));

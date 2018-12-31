@@ -7,6 +7,7 @@ package com.soft1841.sm.controller;
 import com.soft1841.sm.entity.GuanLi;
 import com.soft1841.sm.service.GuanLiService;
 import com.soft1841.sm.utils.ServiceFactory;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,10 +18,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -40,6 +40,7 @@ public class GuanLiController implements Initializable {
         guanliList = guanliService.getAllGuanLis();
         //读取数据库信息
         showGuanLi(guanliList);
+
     }
     private void showGuanLi(List<GuanLi> guanliList) {
         //清除之前内容
@@ -68,16 +69,15 @@ public class GuanLiController implements Initializable {
             leftBox.setSpacing(10);
             //对齐方式
             leftBox.setAlignment(Pos.TOP_CENTER);
-            //头像图片
+            //头像图片  如果本地文件则url:"/img?
             Image image = new Image(guanli.getPicture());
             ImageView pictureImg = new ImageView(image);
             pictureImg.setFitWidth(100);
             pictureImg.setFitHeight(100);
-            pictureImg.setFitHeight(100);
             //给头像设置圆形效果
             Circle circle = new Circle();
-            circle.setCenterX(50);
             circle.setCenterY(50);
+            circle.setCenterX(50);
             circle.setRadius(40);
             pictureImg.setClip(circle);
             //头像加入左边盒子
@@ -93,7 +93,7 @@ public class GuanLiController implements Initializable {
             Label dianhualabel = new Label("电话:");
             centerBox.getChildren().addAll(mingzilabel, xblabel, xllabel, dianhualabel);
             hBox.getChildren().add(centerBox);
-            //创建右边垂直布局盒子
+//            创建右边垂直布局盒子
             VBox rightBox = new VBox();
             rightBox.setSpacing(10);
             rightBox.setAlignment(Pos.TOP_LEFT);
@@ -160,7 +160,6 @@ public class GuanLiController implements Initializable {
             guanLi.setXueli(xueliString);
             guanLi.setMobile(mobileString);
             System.out.println(guanLi.getName() + guanLi.getXinbie() + guanLi.getPicture()+guanLi.getXueli()+guanLi.getMobile());
-
             guanliService.addGuanLi(guanLi);
             stage.close();
             guanliList = guanliService.getAllGuanLis();

@@ -47,19 +47,13 @@ public class GoodServiceTest {
     @Test
     public void getGoodsByTypeId() {
         List<Good> goodList = goodService.getGoodsByTypeId ( 1 );
-
         goodList.forEach(good -> System.out.println(good.getName()));
     }
 
     @Test
     public void countByType() {
-
         int n = goodService.countByType(1);
-
         System.out.println(n);
-
-
-
     }
 
     @Test

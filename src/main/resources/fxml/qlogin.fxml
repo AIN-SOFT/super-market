@@ -14,9 +14,9 @@
 
 
     <ImageView fitHeight="611" fitWidth="984">
-        <Image url="/img/houtaidenglu.jpg"/>
+        <Image url="/img/e.png"/>
     </ImageView>
-    <Label text="超 市 前 台 收 银 系 统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="260"
+    <Label text="五行Java超 市 前 台 收 银 系 统" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="280"
            styleClass="label-big-smallblack "  />
     <Label text="您的工号被设置权限？联系我们" AnchorPane.topAnchor="90" AnchorPane.rightAnchor="20"
            styleClass="label-small-red" />

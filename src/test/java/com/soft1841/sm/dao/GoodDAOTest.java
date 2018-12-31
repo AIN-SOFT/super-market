@@ -2,6 +2,7 @@ package com.soft1841.sm.dao;
 
 import com.soft1841.sm.entity.Good;
 import com.soft1841.sm.utils.DAOFactory;
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.testng.annotations.Test;
 
 import java.sql.SQLException;
@@ -66,5 +67,12 @@ public class GoodDAOTest {
     public void countByType() throws  SQLException {
         int n =goodDAO.countByType(1);
         System.out.println(n);
+    }
+
+    @Test
+    public void countGoods() throws SQLException {
+        int count = goodDAO.countGoods();
+        System.out.println(count);
+
     }
 }

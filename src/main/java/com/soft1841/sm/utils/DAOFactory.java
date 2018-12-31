@@ -12,9 +12,7 @@ public class DAOFactory {
      * 商品类别
      * @return
      */
-    public static TypeDAO getTypeDAOInstance() {
-        return new TypeDAOImpl();
-    }
+    public static TypeDAO getTypeDAOInstance() { return new TypeDAOImpl();}
 
     /**
      *后台

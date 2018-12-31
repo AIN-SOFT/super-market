@@ -52,6 +52,13 @@ public class TypeDAOImpl implements TypeDAO {
         //将Entity转换为Type类型返回
         return convertType(entity);
     }
+
+    @Override
+    public int countTypes() throws SQLException {
+        return  Db.use().queryNumber("SELECT COUNT(*) FROM t_type ").intValue();
+    }
+
+
     private Type convertType(Entity entity) {
         Type type = new Type();
         type.setId(entity.getLong("id"));

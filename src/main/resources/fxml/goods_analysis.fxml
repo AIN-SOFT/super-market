@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.sm.controller.GoodsAnasislyController">
+    <GridPane>
+        <HBox spacing="300">
+            <Label text="."/>
+            <StackPane fx:id="pieChartPane" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <StackPane fx:id="barChartPane" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        </HBox>
+    </GridPane>
+</AnchorPane>

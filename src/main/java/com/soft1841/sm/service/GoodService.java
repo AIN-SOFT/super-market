@@ -62,5 +62,4 @@ List<Good> getGoodsByTypeId(long typeId);
      */
 int countByType(long typeId);
 
-
 }

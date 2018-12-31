@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.geometry.Insets?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -42,5 +41,8 @@
             </ImageView>
         </StackPane>
     </HBox>
-
+    <AnchorPane AnchorPane.topAnchor="320" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="30" styleClass="box"
+                maxWidth="850">
+        <fx:include source="goods_analysis.fxml"/>
+    </AnchorPane>
 </AnchorPane>

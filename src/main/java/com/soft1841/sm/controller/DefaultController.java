@@ -10,10 +10,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DefaultController implements Initializable {
+
+    //左边的轮播
     @FXML
     private ImageView goodImg;
     //轮播图资源数组
     String[] imgPath = {"shangpin1.jpg", "shangpin2.jpg", "shangpin3.jpg", "shangpin4.jpg", "shangpin5.jpg"};
+   //右边的轮播
     @FXML
     private ImageView GetiImg;
     String[] imgPath1 = {"geti2.jpg",  "geti3.png", "geti1.jpg","geti4.jpg", "geti5.jpg"};

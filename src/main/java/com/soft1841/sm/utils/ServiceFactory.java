@@ -18,6 +18,6 @@ public class ServiceFactory {
     }
     public static VipService getVipServiceInstance(){return new VipServiceImpl();}
     public static GoodService getGoodsServiceInstance(){return  new GoodServiceImpl(); }
-    public static GuanLiService getGuanLiServiceInstance(){return  new GuanLiServiceImpl() {
-    };}
+    public static GuanLiService getGuanLiServiceInstance(){return  new GuanLiServiceImpl();}
+    public static AnalysisService getAnalysisServiceInstance(){return  new AnalysisServiceImpl(); }
 }
