@@ -12,7 +12,7 @@
           AnchorPane.leftAnchor="10"/>
     <Button text="新增管理员" AnchorPane.topAnchor="20"
             AnchorPane.leftAnchor="10" onAction="#addGuanLi" styleClass="button-blue" />
-    <Label text="管理员信息" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="10" styleClass="label-small-black " />
+    <!--<Label text="管理员信息" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="10" styleClass="label-small-black " />-->
 
 
 </AnchorPane>

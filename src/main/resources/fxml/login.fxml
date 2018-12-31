@@ -26,7 +26,7 @@
    </HBox>
    <HBox spacing="80" AnchorPane.topAnchor="320" AnchorPane.leftAnchor="400" >
       <Button text="登录" styleClass="button-blue " onAction="#login"/>
-      <Button text="取消" styleClass="button-blue " />
+      <Button text="取消" styleClass="button-blue " onAction="#close"/>
    </HBox>
    <Label text="忘记密码？"  AnchorPane.topAnchor="450" AnchorPane.leftAnchor="450" styleClass="label-big-red " />
 

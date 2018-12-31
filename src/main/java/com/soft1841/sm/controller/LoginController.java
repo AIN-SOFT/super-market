@@ -21,9 +21,15 @@ public class LoginController {
     private TextField accountField;
     @FXML
     private PasswordField passwordField;
-
+    //退出系统
+    @FXML
+    private javafx.scene.control.Button closeButton;
+    @FXML
+    private void close(){
+        Stage closeStage = (Stage) closeButton.getScene().getWindow();
+        closeStage.close();
+    }
     private SellerService sellerService = ServiceFactory.getSellerServiceInstance();
-
     public void login()throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
