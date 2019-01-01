@@ -14,6 +14,7 @@
             fx:controller="com.soft1841.sm.controller.GoodController">
     <HBox alignment="BOTTOM_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" spacing="10">
         <Button styleClass="button-blue" text="添加商品" onAction="#newGoodStage"/>
+        <Button styleClass="button-blue" text="导出商品" onAction="#export"/>
     </HBox>
     <HBox alignment="CENTER" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="10" spacing="10">
         <ComboBox promptText="选择商品类别" fx:id="typeComboBox" prefWidth="150"/>

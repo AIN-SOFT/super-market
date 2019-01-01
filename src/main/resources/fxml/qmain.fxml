@@ -36,27 +36,27 @@
     <TableView AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10"
                AnchorPane.bottomAnchor="300" AnchorPane.topAnchor="70" >
         <columns>
-            <TableColumn text="商品ID">
+            <TableColumn text="商品ID" prefWidth="200" >
                 <cellValueFactory>
                     <PropertyValueFactory property="id" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="商品名称">
+            <TableColumn text="商品名称" prefWidth="600">
                 <cellValueFactory>
                     <PropertyValueFactory property="name" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="单价">
+            <TableColumn text="单价" prefWidth="250">
                 <cellValueFactory>
-                    <PropertyValueFactory property="price" />
+                    <PropertyValueFactory property="price"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="数量">
+            <TableColumn text="数量" prefWidth="250">
                 <cellValueFactory>
                     <PropertyValueFactory property="number" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="小计">
+            <TableColumn text="小计" prefWidth="250">
                 <cellValueFactory>
                     <PropertyValueFactory property="money" />
                 </cellValueFactory>
@@ -81,49 +81,4 @@
         <Button text=" 结 算 " styleClass="button-bigblue"/>
         <Button text="打印小票" styleClass="button-bigblue"/>
     </HBox>
-
-
-    <!--<GridPane hgap="10" prefWidth="200" vgap="10" AnchorPane.leftAnchor="1200" AnchorPane.rightAnchor="10"-->
-              <!--AnchorPane.topAnchor="440">-->
-        <!--<Button prefHeight="42.0" prefWidth="100" style="-fx-background-color: #B0483B;" text="现金支付"-->
-                <!--GridPane.columnIndex="0" GridPane.rowIndex="0" />-->
-        <!--<Button opacity="0.98" prefHeight="41.0" prefWidth="102.0" style="-fx-background-color: #C27F47;" text="1"-->
-                <!--textFill="#3e4340" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0">-->
-            <!--<font>-->
-                <!--<Font size="17.0" />-->
-            <!--</font>-->
-        <!--</Button>-->
-
-        <!--<Button prefHeight="41.0" prefWidth="85.0" style="-fx-background-color: #C27F47;" text="1" textFill="#212826" GridPane.columnIndex="2" GridPane.rowIndex="0" />-->
-        <!--<Button prefHeight="41.0" prefWidth="89.0" style="-fx-background-color: #C27F47;" text="2" textFill="#212826" GridPane.columnIndex="2" GridPane.rowIndex="0" />-->
-        <!--<Button prefHeight="41.0" prefWidth="87.0" style="-fx-background-color: #C27F47;" text="3" textFill="#262c2b" GridPane.columnIndex="3" GridPane.rowIndex="0" />-->
-
-        <!--<Button prefHeight="42.0" prefWidth="100" style="-fx-background-color: #B0483B;" text="支付宝" GridPane.columnIndex="0" GridPane.rowIndex="1" />-->
-        <!--<Button prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #C27F47;" text="4" textFill="#404645" GridPane.columnIndex="1" GridPane.rowIndex="1" />-->
-        <!--<Button prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: #C27F47;" text="5" textFill="#1a1b1b" GridPane.columnIndex="2" GridPane.rowIndex="1" />-->
-        <!--<Button prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: #C27F47;" text="6" textFill="#171b1a" GridPane.columnIndex="3" GridPane.rowIndex="1" />-->
-
-        <!--<Button prefWidth="100" style="-fx-background-color: #B0483B;" text="微信支付" GridPane.columnIndex="0" GridPane.rowIndex="2" />-->
-        <!--<Button prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #C27F47;" text="7" textFill="#212524" GridPane.columnIndex="1" GridPane.rowIndex="2" />-->
-        <!--<Button prefHeight="39.0" prefWidth="89.0" style="-fx-background-color: #C27F47;" text="8" textFill="#272c2b" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
-        <!--<Button prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: #C27F47;" text="9" textFill="#353938" GridPane.columnIndex="3" GridPane.rowIndex="2" />-->
-
-        <!--<Button prefWidth="100" style="-fx-background-color: #287977;" text="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />-->
-        <!--&lt;!&ndash;清空第四行控件&ndash;&gt;-->
-        <!--<Button prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #47C2AB;" text="结算" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />-->
-        <!--<Button prefWidth="100" style="-fx-background-color: #287977;" text="100" GridPane.rowIndex="3" />-->
-        <!--<columnConstraints>-->
-            <!--<ColumnConstraints />-->
-            <!--<ColumnConstraints />-->
-            <!--<ColumnConstraints />-->
-            <!--<ColumnConstraints />-->
-        <!--</columnConstraints>-->
-        <!--<rowConstraints>-->
-            <!--<RowConstraints />-->
-            <!--<RowConstraints />-->
-            <!--<RowConstraints />-->
-            <!--<RowConstraints />-->
-            <!--<RowConstraints />-->
-        <!--</rowConstraints>-->
-    <!--</GridPane>-->
 </AnchorPane>
