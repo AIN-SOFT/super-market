@@ -126,7 +126,6 @@ public class VipController implements Initializable {
         Stage stage = new Stage();
         stage.setTitle("新增会员界的面");
         //创建一个垂直布局，用来放新增用户的各个组件
-
         VBox vBox = new VBox();
         vBox.setSpacing(20);
         vBox.setPadding(new Insets(20, 10, 10, 10));

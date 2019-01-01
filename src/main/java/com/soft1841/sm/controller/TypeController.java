@@ -1,11 +1,8 @@
 package com.soft1841.sm.controller;
 
-import cn.hutool.db.Entity;
-import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.TypeService;
 import com.soft1841.sm.utils.ComponentUtil;
-import com.soft1841.sm.utils.DAOFactory;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -15,14 +12,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
  * 商品类别
- * @auther 许源
+ * @auther 徐鹏
  * 2018年12月25日
  */
 public class TypeController implements Initializable {
@@ -78,7 +74,6 @@ public class TypeController implements Initializable {
         typeList = typeService.getAllTypes();
         showTypeData(typeList);
     }
-
     public void addType() {
         //创建一个输入对话框
         TextInputDialog dialog = new TextInputDialog("新类别");

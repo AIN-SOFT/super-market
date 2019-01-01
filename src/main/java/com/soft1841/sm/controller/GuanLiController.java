@@ -69,7 +69,7 @@ public class GuanLiController implements Initializable {
             leftBox.setSpacing(10);
             //对齐方式
             leftBox.setAlignment(Pos.TOP_CENTER);
-            //头像图片  如果本地文件则url:"/img?
+            //头像图片
             Image image = new Image(guanli.getPicture());
             ImageView pictureImg = new ImageView(image);
             pictureImg.setFitWidth(100);
@@ -93,7 +93,7 @@ public class GuanLiController implements Initializable {
             Label dianhualabel = new Label("电话:");
             centerBox.getChildren().addAll(mingzilabel, xblabel, xllabel, dianhualabel);
             hBox.getChildren().add(centerBox);
-//            创建右边垂直布局盒子
+            //创建右边垂直布局盒子
             VBox rightBox = new VBox();
             rightBox.setSpacing(10);
             rightBox.setAlignment(Pos.TOP_LEFT);
@@ -134,8 +134,9 @@ public class GuanLiController implements Initializable {
         stage.setTitle("新增会员界面");
         //创建一个垂直布局，用来放新增用户的各个组件
         VBox vBox = new VBox();
-        vBox.setSpacing(10);
+        vBox.setSpacing(30);
         vBox.setPadding(new Insets(20, 10, 10, 10));
+        vBox.setAlignment(Pos.CENTER);
         TextField nameField = new TextField("请输入姓名");
         TextField xinbieField = new TextField("新增管理员的性别");
         TextField pictureField = new TextField("请输入头像地址");

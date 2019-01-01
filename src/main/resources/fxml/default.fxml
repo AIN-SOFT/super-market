@@ -17,19 +17,19 @@
         <GridPane hgap="20" vgap="20" prefHeight="300" prefWidth="360" styleClass="box">
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="box,green-theme" prefWidth="150"
                        prefHeight="130">
-                <Label text="员工10人" styleClass="font-title"/>
+                <Label text="员工5人" styleClass="label-small-black"/>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="box,blue-theme" prefWidth="150"
                        prefHeight="130">
-                <Label text="类别8种" styleClass="font-title"/>
+                <Label text="类别7种" styleClass="label-small-black"/>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="box,warm-theme" prefWidth="150"
                        prefHeight="130">
-                <Label text="商品100种" styleClass="font-title"/>
+                <Label text="商品128种" styleClass="label-small-black"/>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="box,warning-theme" prefWidth="150"
                        prefHeight="130">
-                <Label text="销售额2.3万" styleClass="font-title"/>
+                <Label text="销售额12万" styleClass="label-small-black"/>
             </StackPane>
             <padding>
                 <Insets top="20" left="20" right="20" bottom="20"/>

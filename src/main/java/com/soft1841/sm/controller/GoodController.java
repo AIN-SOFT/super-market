@@ -1,6 +1,5 @@
 package com.soft1841.sm.controller;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Good;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.GoodService;
