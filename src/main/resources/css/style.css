@@ -53,6 +53,7 @@
 .label-small-black{
     -fx-font-size: 18px;
     -fx-text-fill: #000000;
+
 }
 .theme-blue{
     -fx-background-color:  #1E90FF;

@@ -8,7 +8,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="530.0" prefWidth="790.0" style="-fx-background-color: #F2F2F2;"
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.soft1841.sm.controller.LoginController">
+            fx:controller="com.soft1841.sm.controller.LoginController" onKeyPressed="#login_Enter">
    <ImageView fitHeight="611" fitWidth="984">
       <Image url="/img/qiantaidenglu.jpg"/>
    </ImageView>
@@ -25,8 +25,9 @@
       <PasswordField fx:id="passwordField"/>
    </HBox>
    <HBox spacing="80" AnchorPane.topAnchor="320" AnchorPane.leftAnchor="400" >
-      <Button text="登录" styleClass="button-blue " onAction="#login"/>
-      <Button text="取消" styleClass="button-blue " onAction="#close"/>
+      <Button text="登录"  fx:id="loginButton" defaultButton="true" styleClass="button-blue " onAction="#login"/>
+      <Button text="取消" styleClass="button-blue " />
+
    </HBox>
    <Label text="忘记密码？"  AnchorPane.topAnchor="450" AnchorPane.leftAnchor="450" styleClass="label-big-red " />
 

@@ -12,7 +12,7 @@
           minHeight="50" alignment="CENTER" styleClass="green-theme">
         <Label text="新增商品信息" styleClass="font-title,green-theme,font-white"/>
     </HBox>
-    <VBox styleClass="default-theme" spacing="20" minHeight="400"
+    <VBox  style="-fx-background-image: url(/img/90.png)" styleClass="default-theme" spacing="20" minHeight="400"
           AnchorPane.topAnchor="55" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
         <ComboBox promptText="选择类别" fx:id="goodType" prefWidth="120"/>
         <TextField promptText="商品" fx:id="goodName"/>
