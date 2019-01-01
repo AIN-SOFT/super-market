@@ -140,7 +140,7 @@ public class VipController implements Initializable {
         TextField mobileField = new TextField("请输入手机号码");
 
         Button addBtn = new Button("确认新增" );
-        addBtn.getStyleClass().add("warm-theme");
+        addBtn.getStyleClass().add("red-theme");
 
         vBox.getChildren().addAll(nameField,pictureField,datePicker,jifenField,yearField,addressField,mobileField,addBtn);
         Scene scene = new Scene(vBox, 540, 450);
