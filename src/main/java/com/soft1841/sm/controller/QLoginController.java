@@ -2,15 +2,18 @@ package com.soft1841.sm.controller;
 
 import com.soft1841.sm.service.QianTaiService;
 import com.soft1841.sm.utils.ServiceFactory;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+
 
 /**
  * 前台登陆界面
@@ -52,6 +55,22 @@ public class QLoginController {
         }else {
             alert.setContentText("账号或密码错误，登录失败!");
             alert.showAndWait();
+        }
+    }
+    public void login_Enter(KeyEvent event){
+        if (event.getCode  () == KeyCode.ENTER){
+            try {
+                qiantailogin();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+    public void qiantailogin (ActionEvent event){
+        try {
+            qiantailogin();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

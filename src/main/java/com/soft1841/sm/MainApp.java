@@ -14,7 +14,6 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
     @Override    public void start(Stage primaryStage) throws Exception {
-
         primaryStage.setTitle("超市后台系统");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         Parent root = fxmlLoader.load();

@@ -16,5 +16,4 @@
         <ImageView fx:id="guanliImg" fitWidth="600" fitHeight="300">
         </ImageView>
     </StackPane>
-
 </AnchorPane>
