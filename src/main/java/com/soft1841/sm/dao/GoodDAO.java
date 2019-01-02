@@ -77,6 +77,13 @@ public interface GoodDAO {
      * @throws SQLException
      */
     int countGoods() throws SQLException;
+    /**
+     * 根据barCode模糊查询
+     * @param barCode
+     * @return
+     * @throws SQLException
+     */
+    List<Good> getGoodsByBarCode(String barCode) throws SQLException;
 }
 
 

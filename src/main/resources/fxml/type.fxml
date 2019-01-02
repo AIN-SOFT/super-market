@@ -8,15 +8,24 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.TypeController">
-<ImageView fitWidth="1900" fitHeight="690">
-    <Image url="/img/23.jpg "/>
+<ImageView fitWidth="1900" fitHeight="780">
+    <Image url="/img/typebj1.jpg"/>
 </ImageView>
+    <ImageView fitHeight="200" fitWidth="200" AnchorPane.topAnchor="100" AnchorPane.rightAnchor="300">
+        <Image url="/img/niaogif.jpg"/>
+    </ImageView>
+    <ImageView fitHeight="130" fitWidth="130" AnchorPane.topAnchor="100" AnchorPane.rightAnchor="200">
+        <Image url="/img/niaogif.jpg"/>
+    </ImageView>
+    <ImageView fitHeight="70" fitWidth="70" AnchorPane.topAnchor="100" AnchorPane.rightAnchor="140">
+        <Image url="/img/niaogif.jpg"/>
+    </ImageView>
     <HBox AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" spacing="20">
         <Button text="添加商品类别"   onAction="#addType" styleClass="button-blue"/>
     </HBox>
     <!--表格视图，用来显示数据库中查询到的商品类别-->
-    <TableView fx:id="typeTable" prefWidth="1200" prefHeight="320"
-               AnchorPane.leftAnchor="20" AnchorPane.topAnchor="50" >
+    <TableView fx:id="typeTable" prefWidth="1300" prefHeight="320"
+               AnchorPane.leftAnchor="20" AnchorPane.topAnchor="80" >
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>

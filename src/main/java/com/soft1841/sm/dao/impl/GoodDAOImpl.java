@@ -93,6 +93,16 @@ public class GoodDAOImpl implements GoodDAO {
         return  Db.use().queryNumber("SELECT COUNT(*) FROM t_goods ").intValue();
     }
 
+    @Override
+    public List<Good> getGoodsByBarCode(String barCode) throws SQLException {
+        List<Entity> entityList = Db.use().query("SELECT * FROM t_goods WHERE barCode = ?",barCode);
+        List<Good> goodsList = new ArrayList<>();
+        for (Entity entity : entityList) {
+            goodsList.add(convertGood(entity));
+        }
+        return goodsList;
+    }
+
     /**
      * @param entity
      * @return

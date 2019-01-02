@@ -100,4 +100,15 @@ public class GoodServiceImpl implements GoodService {
         }
         return result;
     }
+
+    @Override
+    public List<Good> getGoodsByBarCode(String barCode) {
+        List<Good> goodsList = new ArrayList<>();
+        try {
+            goodsList = goodDAO.getGoodsByBarCode(barCode);
+        } catch (SQLException e) {
+            System.err.println("通过条码查找商品出现异常");
+        }
+        return goodsList;
     }
+}

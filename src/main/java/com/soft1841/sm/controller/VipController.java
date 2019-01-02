@@ -85,6 +85,11 @@ public class VipController implements Initializable {
             Label jflabel    = new Label("积分:");
             Label dianhualabel  = new Label("电话:");
             Label dizhilabel  = new Label("地址：");
+            mingzilabel.getStyleClass().add("label-small-white");
+            nianfenlabel.getStyleClass().add("label-small-white");
+            jflabel.getStyleClass().add("label-small-white");
+            dianhualabel.getStyleClass().add("label-small-white");
+            dizhilabel.getStyleClass().add("label-small-white");
             centerBox.getChildren().addAll(mingzilabel,nianfenlabel,jflabel,dianhualabel,dizhilabel);
             hBox.getChildren().add(centerBox);
             //创建右边垂直布局盒子
@@ -96,6 +101,11 @@ public class VipController implements Initializable {
             Label jifenlabel = new Label(vip.getJifen());//会员积分
             Label mobilelabel = new Label(vip.getMobile());//会员电话
             Label addresslabel = new Label(vip.getAddress());//会员地址
+            namelabel.getStyleClass().add("label-small-white");
+            yearlabel.getStyleClass().add("label-small-white");
+            jifenlabel.getStyleClass().add("label-small-white");
+            mobilelabel.getStyleClass().add("label-small-white");
+            addresslabel.getStyleClass().add("label-small-white");
             Button button = new Button("删除");
             button.getStyleClass().add("warning-theme");
             //点击删除按钮要做的事情
@@ -138,7 +148,6 @@ public class VipController implements Initializable {
         TextField jifenField = new TextField("新增会员的积分");
         TextField yearField = new TextField("新增会员的年限");
         TextField mobileField = new TextField("请输入手机号码");
-
         Button addBtn = new Button("确认新增" );
         addBtn.getStyleClass().add("red-theme");
 
@@ -154,6 +163,7 @@ public class VipController implements Initializable {
             String jifenString = jifenField.getText().trim();
             String yearString = yearField.getText().trim();
             String mobileString = mobileField.getText().trim();
+
             vip.setAddress(addressString);
             vip.setMobile(mobileString);
             vip.setName(nameString);

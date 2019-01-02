@@ -30,9 +30,6 @@ public class SellerServiceImpl implements SellerService {
                 return true;
             }
         }
-
-
-
         return false;
     }
 }

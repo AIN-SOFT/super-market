@@ -155,23 +155,27 @@ public class GoodController implements Initializable {
                     //用VBox显示具体商品信息
                     VBox vBox = new VBox();
                     vBox.setSpacing(20);
+                    vBox.getStyleClass().add("beijing") ;
                     vBox.setAlignment(Pos.CENTER);
                     vBox.setPrefSize(600, 400);
                     vBox.setPadding(new Insets(0, 10, 0, 10));
-                    Label nameLabel = new Label("        商品名称：\n" + good.getName());
-                    nameLabel.getStyleClass().add("font-title");
-                    Label priceLabel = new Label("价格:" + good.getPrice());
+                    Label nameLabel = new Label("商品名称 : " + good.getName());
+                    nameLabel.getStyleClass().add("label-small-black");
+                    Label priceLabel = new Label("价格 :  " + good.getPrice());
+                    priceLabel.getStyleClass().add("label-small-black");
                     ImageView goodsImgView = new ImageView(new Image(good.getCover()));
                     goodsImgView.setFitHeight(150);
                     goodsImgView.setFitWidth(200);
                     Label summaryLabel = new Label(good.getSummary());
+                    summaryLabel.getStyleClass().add("label-small-black");
                     summaryLabel.setPrefWidth(200);
                     summaryLabel.setWrapText(true);
                     summaryLabel.getStyleClass().add("box");
                     vBox.getChildren().addAll(nameLabel, priceLabel, goodsImgView, summaryLabel);
                     Scene scene = new Scene(vBox, 640, 480);
+
                     //因为是一个新的窗口，需要重新读入一下样式表，这个界面就可以使用style.css样式表中的样式了
-                    scene.getStylesheets().add("/css/manage.css");
+                    scene.getStylesheets().add("/css/style.css");
                     goodInfoStage.setScene(scene);
                     goodInfoStage.show();
                 }

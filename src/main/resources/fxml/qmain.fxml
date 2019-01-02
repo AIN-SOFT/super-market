@@ -11,15 +11,18 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.soft1841.sm.controller.QMainController">
+            fx:controller="com.soft1841.sm.controller.CashierController">
     <HBox prefWidth="2000" spacing="220" style="-fx-background-color:rgb(227, 239, 255)"
           prefHeight="70">
         <AnchorPane>
             <HBox  spacing="220" AnchorPane.topAnchor="30" >
                 <Label text="."/>
             <HBox prefHeight="40" spacing="12">
-                <Label style="-fx-font-size: 20pX" text="商品条码/商品编号：" />
-                <TextField prefHeight="30" text="" />
+                <Label style="-fx-font-size: 20pX" text="商品条码/商品编号："/>
+                <TextField prefHeight="30" text=""  fx:id="barCodeField"/>
+                <Button layoutX="294.0" layoutY="34.0" mnemonicParsing="false" prefHeight="32.0"
+                        prefWidth="100.0"
+                        stylesheets="@../css/style.css" text="查询" onAction="#barCodeEnter" styleClass="button-blue "/>
             </HBox>
             <HBox prefHeight="40" spacing="12">
                 <Label style="-fx-font-size: 20px" text="导购员：" />

@@ -3,7 +3,6 @@ package com.soft1841.sm.controller;
  * 管理员信息的增，删，查
  * @author侯粤嘉
  */
-
 import com.soft1841.sm.entity.GuanLi;
 import com.soft1841.sm.service.GuanLiService;
 import com.soft1841.sm.utils.ServiceFactory;
@@ -35,7 +34,7 @@ public class GuanLiController implements Initializable {
     private List<GuanLi> guanliList = new ArrayList<>();
     @FXML
     private ImageView guanliImg;
-    String[] imgPath2 = {"yuangong5.jpg", "yuangong2.jpg", "yuangong3.jpg", "yuangong4.jpg"};
+    String[] imgPath2 = {"yuangong5.jpg", "yuangong2.jpg", "yuangong3.jpg", "yuangong4.jpg","yuangong5.jpg"};
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -61,7 +60,7 @@ public class GuanLiController implements Initializable {
                         });
                         try {
                             //休眠2秒
-                            Thread.sleep(3001);
+                            Thread.sleep(2200);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -73,9 +72,7 @@ public class GuanLiController implements Initializable {
                 }
             }
         }).start();
-
     }
-
     private void showGuanLi(List<GuanLi> guanliList) {
         //清除之前内容
         guanliPane.getChildren().clear();
@@ -166,7 +163,6 @@ public class GuanLiController implements Initializable {
                 hBox.getChildren().add(rightBox);
                 guanliPane.getChildren().add(hBox);
             });
-
             guanliPane.getChildren().add(vBox1);
         }
     }

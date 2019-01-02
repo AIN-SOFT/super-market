@@ -62,4 +62,10 @@ List<Good> getGoodsByTypeId(long typeId);
      */
 int countByType(long typeId);
 
+    /**
+     * 根据条码查询商品
+     * @param barCode
+     * @return
+     */
+    List<Good> getGoodsByBarCode(String barCode);
 }
